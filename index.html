@@ -1,0 +1,1592 @@
+<title>18th Street Raspas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="sd/s_000.jpg" media="(min-width:761px)">
+<link rel="preload" as="image" href="sm/s_000.jpg" media="(max-width:760px)">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap">
+<style>
+:root{
+  --ink:#14433d; --ink-2:#4f6159; --ground:#fdf7e7; --paper:#ffffff; --line:#e3e3e3;
+  --wine:#7e0022; --btealc:#2ad2c9; --fteal:#008b70; --mint:#d3e8e3; --banana:#fdf4b5;
+  --chamoy:#d32737; --mango:#f2a007; --lime:#2f9e4f; --blue:#1d7fe0; --pink:#ff5d9e;
+  --dusk:#14433d;
+  --display:"Newsreader","Tinos","Times New Roman",Times,serif;
+  --body:"DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"DM Sans", system-ui, sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+a{color:inherit}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:20px}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/1 var(--body);padding:14px 22px;border-radius:999px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--mango);outline-offset:2px}
+.btn-red{background:var(--chamoy);color:#fff}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.7);backdrop-filter:blur(4px)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-sm{padding:10px 16px;font-size:14px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.demo-bar{background:var(--ink);color:#fff;text-align:center;font:500 12px/1.4 var(--mono);letter-spacing:.06em;padding:8px 16px}
+
+/* NAV */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(251,248,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:68px}
+.logo{font-family:var(--display);font-size:22px;text-decoration:none;color:var(--chamoy);line-height:1;white-space:nowrap}
+.logo small{display:block;font:500 10px/1 var(--mono);letter-spacing:.2em;color:var(--ink);margin-top:3px;text-transform:uppercase}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{text-decoration:none;font-weight:600;font-size:15px}
+.nav ul a:hover{color:var(--chamoy)}
+.lang{display:flex;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;font:600 12px/1 var(--mono);padding:7px 9px;cursor:pointer;color:var(--ink)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.cart-btn{position:relative}
+.cart-count{position:absolute;top:-6px;right:-6px;background:var(--mango);color:var(--ink);font:700 11px/20px var(--body);min-width:20px;height:20px;border-radius:10px;text-align:center}
+.menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:6px}
+@media (max-width:860px){
+  .nav .wrap{height:auto;padding-block:10px;flex-wrap:wrap;gap:12px;row-gap:8px}
+  .logo{font-size:20px}
+  .nav ul{order:3;width:100%;margin:0;gap:18px;overflow-x:auto;padding-bottom:2px;-webkit-overflow-scrolling:touch}
+  .nav ul a{white-space:nowrap}
+  .lang{margin-left:auto}
+  .cart-btn{padding:9px 14px;font-size:14px}
+}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;color:#fff;isolation:isolate;background:#14433d}
+.hero .bg{position:absolute;inset:-30px;background:url(data:image/jpeg;base64,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) center/cover;filter:blur(22px) saturate(1.4);opacity:.5;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(19,15,38,.95) 0%,rgba(19,15,38,.8) 45%,rgba(19,15,38,.55) 100%)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;padding-block:64px 88px}
+.hero-copy{display:grid;gap:18px;max-width:560px}
+.hero .stamp{color:var(--mango)}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(48px,7vw,84px);line-height:.95}
+.hero h1 .rb{display:block;background:linear-gradient(90deg,#2ad2c9,#a9df71);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.06em}
+.hero .tag{font-family:var(--display);font-size:clamp(20px,2.4vw,26px);color:#ffd36b;line-height:1.15}
+.hero p.lede{font-size:18px;max-width:46ch;color:#ece7fa}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.hero .callrow{font:500 14px/1.4 var(--mono);color:#cfc8e8}
+.hero .callrow a{color:#fff;text-decoration:none;border-bottom:1.5px solid var(--mango)}
+.hero-photo{position:relative;margin:0}
+.hero-photo .frame{border-radius:22px;overflow:hidden;aspect-ratio:4/3;border:5px solid #fff;box-shadow:0 30px 60px -24px rgba(0,0,0,.7);transform:rotate(1.2deg);max-width:100%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.hero-photo figcaption{position:absolute;left:-10px;bottom:-16px;background:var(--mango);color:var(--ink);font:500 12px/1.3 var(--mono);padding:8px 12px;border-radius:10px;transform:rotate(-2deg);box-shadow:0 8px 20px -8px rgba(0,0,0,.5)}
+.rainbow{height:6px;background:linear-gradient(90deg,#14433d,#008b70,#2ad2c9)}
+.scroll-hint{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);font:500 11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:.8;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none}
+.scroll-hint span.chev{width:14px;height:14px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg);animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px) rotate(45deg)}}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:40px;padding-block:40px 80px}.hero-photo{order:-1}.hero-photo .frame{transform:none}}
+/* SYRUP STRIP */
+.strip{background:var(--chamoy);color:#fff;overflow:hidden;white-space:nowrap;padding-block:12px}
+.strip-track{display:inline-flex;gap:28px;animation:marq 38s linear infinite;font-family:var(--display);font-size:20px}
+.strip-track span::after{content:"✦";margin-left:28px;color:var(--mango)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding-block:88px}
+.sec-head{display:grid;gap:10px;margin-bottom:36px;max-width:640px}
+.sec-head h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.6vw,52px);line-height:1}
+.sec-head p{color:var(--ink-2);font-size:17px}
+
+/* MENU */
+#menu{background:var(--paper);border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;border-bottom:2px solid var(--line);padding-bottom:12px}
+.tab{background:var(--ground);border:1.5px solid var(--line);color:var(--ink);font:700 15px/1 var(--body);padding:12px 18px;border-radius:999px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--chamoy);border-color:var(--chamoy);color:#fff}
+.panel-grid{display:grid;grid-template-columns:320px 1fr;gap:32px;align-items:start}
+@media (max-width:860px){.panel-grid{grid-template-columns:1fr}}
+.order-card{background:var(--dusk);color:#fff;border-radius:20px;padding:24px;display:grid;gap:16px;position:sticky;top:90px}
+@media (max-width:860px){.order-card{position:static}}
+
+.order-card .art{display:grid;place-items:center;background:rgba(255,255,255,.06);border-radius:14px;padding:10px}
+.sizes{display:grid;grid-template-columns:repeat(auto-fit,minmax(60px,1fr));gap:6px}
+.sizes div{background:rgba(255,255,255,.08);border-radius:10px;padding:8px 4px;text-align:center;font:500 12px/1.3 var(--mono)}
+.sizes b{display:block;font:700 15px/1.2 var(--body);color:var(--mango)}
+.extras{background:#fff;color:var(--ink);border-radius:12px;padding:12px 14px;font-size:14px}
+.extras strong{font:500 12px/1 var(--mono);color:var(--chamoy);letter-spacing:.08em;display:block;margin-bottom:6px}
+.fgroups{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:22px 20px}
+.fgroup h4{margin:0 0 10px;font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.fgroup h4 i{width:12px;height:12px;border-radius:50%;display:block}
+.fgroup ul{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:15px;font-weight:500}
+.mango-flavs{display:flex;flex-wrap:wrap;gap:10px}
+.mango-flavs span{font-family:var(--display);font-weight:700;font-size:18px;padding:10px 18px;border-radius:14px;background:var(--ground);border:1.5px solid var(--line)}
+.snacks{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 36px}
+.snack{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding-block:16px;border-bottom:1.5px dashed var(--line);align-items:start}
+.snack h4{margin:0;font-size:17px;font-weight:800}
+.snack p{color:var(--ink-2);font-size:14px;grid-column:1}
+.snack .ex{font:500 12px/1.4 var(--mono);color:var(--chamoy);grid-column:1}
+.snack .act{grid-row:1/span 3;grid-column:2;display:grid;justify-items:end;gap:8px}
+.flav{display:inline-flex;align-items:center;gap:8px;padding:9px 14px 9px 10px;border-radius:999px;background:var(--ground);border:1.5px solid var(--line);font-weight:600;font-size:15px}
+.flav i{width:16px;height:16px;border-radius:50%;display:block;box-shadow:inset 0 -3px 0 rgba(0,0,0,.18)}
+.flavors{display:flex;flex-wrap:wrap;gap:10px}
+.price{font:500 15px/1 var(--mono)}
+.sample{font:500 11px/1.4 var(--mono);color:var(--ink-2);margin-top:22px}
+.opt-group{display:grid;gap:4px}
+.opt-group small{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-top:6px}
+/* CATERING */
+#catering{padding-top:0}
+.cat-hero{position:relative;height:420px;overflow:hidden;color:#fff}
+.slide{position:absolute;inset:0;display:flex;align-items:flex-end;opacity:0;transition:opacity .7s ease;padding-bottom:56px}
+.slide.on{opacity:1}
+.slide .wrap{width:100%;display:grid;gap:12px}
+.slide h3{font-family:var(--display);font-weight:800;letter-spacing:-.025em;font-size:clamp(34px,5vw,58px);line-height:1;max-width:14ch;text-shadow:0 2px 0 rgba(0,0,0,.2)}
+.slide .deco{position:absolute;right:6%;top:50%;transform:translateY(-50%);display:flex;gap:10px;align-items:flex-end}
+@media (max-width:700px){.slide .deco{opacity:.35;right:-10%}}
+.car-ctrl{position:absolute;bottom:18px;right:20px;display:flex;gap:8px;align-items:center;z-index:2}
+.car-ctrl button{background:rgba(255,255,255,.2);border:1.5px solid #fff;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:16px}
+.dots{display:flex;gap:6px;margin-inline:6px}
+.dots button{width:10px;height:10px;padding:0;border-radius:50%;border:1.5px solid #fff;background:transparent}
+.dots button[aria-current="true"]{background:#fff}
+
+.cat-intro{text-align:center;display:grid;justify-items:center;gap:14px;padding-block:64px 44px}
+.cat-intro h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.4vw,40px);line-height:1.05}
+.cat-intro .sub{font-family:var(--display);color:var(--chamoy);font-size:17px;font-weight:700}
+.cat-intro p{max-width:60ch;color:var(--ink-2);font-size:17px}
+
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media (max-width:960px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.cat-grid{grid-template-columns:1fr}}
+.cat-card{background:var(--paper);border-radius:20px;overflow:hidden;display:grid;grid-template-rows:auto 1fr auto;box-shadow:0 1px 0 var(--line),0 10px 30px -18px rgba(29,24,56,.35)}
+.cat-card .art{height:190px;display:grid;place-items:center;position:relative}
+.cat-card .badge{position:absolute;top:14px;left:14px;background:#fff;color:var(--ink);font:500 11px/1 var(--mono);padding:6px 9px;border-radius:999px;letter-spacing:.06em}
+.cat-card .body{padding:20px 20px 8px;display:grid;gap:8px;align-content:start}
+.cat-card h3{font-size:22px;font-weight:800}
+.cat-card p{color:var(--ink-2);font-size:15px}
+.cat-card .foot{display:flex;gap:10px;padding:14px 20px 22px;flex-wrap:wrap}
+
+/* CALC */
+.calc{margin-top:56px;display:grid;grid-template-columns:1.1fr .9fr;border-radius:24px;overflow:hidden;background:var(--dusk);color:#fff}
+@media (max-width:820px){.calc{grid-template-columns:1fr}}
+.calc .l{padding:36px;display:grid;gap:22px}
+.calc h3{font-family:var(--display);font-weight:800;font-size:27px;line-height:1.1}
+.calc label{font-weight:600;font-size:15px;display:block;margin-bottom:8px}
+.calc input[type=range]{width:100%;accent-color:var(--mango)}
+.guests-out{font:500 14px/1 var(--mono);color:var(--mango)}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{background:transparent;border:1.5px solid rgba(255,255,255,.5);color:#fff;border-radius:999px;padding:9px 14px;font:600 14px/1 var(--body);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--mango);border-color:var(--mango);color:var(--ink)}
+.chk{display:flex;gap:10px;align-items:center;font-size:15px;margin-bottom:8px;cursor:pointer}
+.chk input{accent-color:var(--mango);width:18px;height:18px}
+.calc .r{background:var(--mango);color:var(--ink);padding:36px;display:grid;align-content:center;gap:14px}
+.calc .total{font-family:var(--display);font-weight:800;font-size:50px;line-height:1;letter-spacing:-.03em}
+.calc .lines{font:500 13px/1.8 var(--mono)}
+.calc .lines div{display:flex;justify-content:space-between;border-bottom:1px dashed rgba(29,24,56,.3)}
+
+/* FAQ */
+.faq{margin-top:64px;max-width:820px}
+.faq h3{font-family:var(--display);font-weight:800;font-size:26px;margin-bottom:12px}
+details{border-bottom:1.5px solid var(--line);padding-block:16px}
+summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:500 22px/1 var(--mono);color:var(--chamoy)}
+details[open] summary::after{content:"–"}
+details p{color:var(--ink-2);margin-top:10px;max-width:65ch}
+
+/* VISIT */
+#visit{background:var(--paper);border-top:1px solid var(--line)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:760px){.visit{grid-template-columns:1fr}}
+.card-plain{border:1.5px dashed var(--line);border-radius:18px;padding:24px;display:grid;gap:10px}
+.hours{font:500 14px/1.9 var(--mono)}
+.hours div{display:flex;justify-content:space-between;gap:4px 14px;flex-wrap:wrap}
+
+footer{background:var(--ink);color:#d9d4ec;padding-block:56px 32px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:28px}
+@media (max-width:760px){.fgrid{grid-template-columns:1fr 1fr}}
+footer h4{color:#fff;font-size:14px;margin:0 0 10px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--mango)}
+footer .legal{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font:500 12px/1.5 var(--mono);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* MODALS & DRAWER */
+.scrim{position:fixed;inset:0;background:rgba(20,16,40,.55);z-index:60;display:grid;place-items:center;padding:16px}
+.modal{background:var(--paper);border-radius:22px;width:min(560px,100%);max-height:calc(100dvh - 32px);overflow:auto;position:relative}
+.modal .mh{padding:22px 24px 0;display:flex;justify-content:space-between;align-items:start;gap:12px}
+.modal .mh h3{font-family:var(--display);font-weight:800;font-size:24px;line-height:1.1}
+.modal .mb{padding:16px 24px 24px;display:grid;gap:16px}
+.x{background:var(--ground);border:0;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:18px;flex:none}
+.field{display:grid;gap:6px}
+.field label,.flabel{font-weight:600;font-size:14px}
+.field input,.field select,.field textarea{font:inherit;font-size:15px;padding:11px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--ground);color:var(--ink);width:100%}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:480px){.row2{grid-template-columns:1fr}}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:1.5px solid var(--line);background:var(--ground);border-radius:999px;padding:8px 13px;font:600 14px/1 var(--body);cursor:pointer;color:var(--ink)}
+.opt[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.detail-list{margin:0;padding-left:20px;color:var(--ink-2);display:grid;gap:4px}
+.notice{font:500 12px/1.5 var(--mono);background:#fff4d6;border:1px solid #f3d27a;color:#6a4b00;padding:10px 12px;border-radius:10px}
+.success{text-align:center;display:grid;gap:10px;justify-items:center;padding:12px 0}
+.success .big{font-family:var(--display);font-weight:800;font-size:28px;color:var(--lime)}
+
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--paper);z-index:61;display:grid;grid-template-rows:auto 1fr auto;box-shadow:-20px 0 40px -20px rgba(0,0,0,.4);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.drawer .dh{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;border-bottom:1px solid var(--line)}
+.drawer .dh h3{font-family:var(--display);font-weight:800;font-size:22px}
+.drawer .dl{overflow:auto;padding:10px 22px;display:grid;align-content:start}
+.line{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.line .n{font-weight:700}
+.line .o{color:var(--ink-2);font-size:13px;grid-column:1}
+.qty{display:flex;align-items:center;gap:8px;grid-column:1}
+.qty button{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);background:var(--ground);cursor:pointer;font-weight:700}
+.line .p{font:500 15px/1 var(--mono);grid-row:1;grid-column:2}
+.drawer .df{padding:18px 22px;border-top:1px solid var(--line);display:grid;gap:10px}
+.sum{font:500 14px/1.8 var(--mono)}
+.sum div{display:flex;justify-content:space-between}
+.sum .t{font-size:17px;font-weight:500;color:var(--ink)}
+.empty{color:var(--ink-2);padding-block:30px;text-align:center}
+.cardbox{border:1.5px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:10px;background:var(--ground)}
+.cardbox input{background:var(--paper)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;z-index:80;font-size:14px}
+
+[hidden]{display:none!important}
+.view.enter{animation:viewIn .35s ease both}
+@keyframes viewIn{from{opacity:.001;transform:translateY(8px)}to{opacity:1;transform:none}}
+.nav ul a[aria-current="page"]{color:var(--chamoy);box-shadow:inset 0 -2px 0 var(--chamoy)}
+canvas.rcup{display:block;max-width:100%;height:auto!important;filter:drop-shadow(0 10px 18px rgba(20,10,40,.25))}
+section.view{padding-block:56px 72px}
+.quick{padding-block:40px 56px}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:900px){.quick-grid{grid-template-columns:1fr}}
+.qcard{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:16px 20px 16px 12px;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
+.qcard:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(29,24,56,.45)}
+.qcard h3{font-size:20px;font-weight:800;margin:4px 0}
+.qcard p{color:var(--ink-2);font-size:14px}
+.qlink{display:inline-block;margin-top:8px;font-weight:700;color:var(--chamoy);font-size:14px}
+.qart{width:118px;height:118px;border-radius:14px;overflow:hidden;background:#14433d;flex:none}
+.qart img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.qcard:hover .qart img{transform:scale(1.06)}
+.cat-intro{display:flex!important;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;text-align:left!important;padding-block:32px 20px!important}
+.cat-intro p{margin-top:8px}
+.cat-hero{height:300px!important}
+.faq{margin-top:0!important}
+.slide{padding-bottom:40px!important}.slide h3{font-size:clamp(26px,3.6vw,42px)!important;font-weight:800}
+.calc{margin-top:0!important}
+.cat-card .art,.item .art,.order-card .art{background:radial-gradient(circle at 50% 65%,#d3e8e3,#bcded4)!important}
+/* crew band */
+.crew{background:var(--paper);border-block:1px solid var(--line)}
+.crew .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:start}
+@media (max-width:860px){.crew .wrap{grid-template-columns:1fr}}
+.locinfo{display:grid;gap:6px;align-content:start}
+.locinfo h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.6vw,52px);line-height:1;margin-top:6px}
+.locsub{font-size:19px;color:var(--ink-2)}
+.loclinks{display:grid;gap:8px;margin-top:14px}
+.loclinks a{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:600}
+.loclinks a:hover{color:var(--chamoy)}
+.locbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.locrule{border:0;border-top:1px solid var(--line);margin:26px 0 18px;width:100%}
+.week{margin-top:10px;font:500 14px/1 var(--mono)}
+.week div{display:flex;justify-content:space-between;gap:12px;padding-block:11px;border-bottom:1px solid var(--line)}
+.week div span:first-child{font-family:var(--body);font-weight:700;font-size:15px}
+.week div span:last-child{color:var(--ink-2)}
+.mapwrap{display:grid;gap:0;align-content:start;width:100%;justify-self:end}
+.mapcard{position:relative;display:block;border-radius:18px 18px 0 0;overflow:hidden;border:1px solid var(--line);border-bottom:0;box-shadow:0 24px 48px -30px rgba(29,24,56,.6);aspect-ratio:4/3;background:#eceae4}
+.mapart,.mapcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.mapcard iframe[hidden]{display:none}
+.mapinfo{position:absolute;top:14px;left:14px;max-width:78%;background:#fff;border-radius:10px;box-shadow:0 8px 22px -10px rgba(0,0,0,.45);padding:12px 14px;display:flex;gap:14px;align-items:center}
+.mapinfo strong{display:block;font-size:15px}
+.mapinfo span{font-size:12.5px;color:var(--ink-2)}
+.mapgo{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ground);color:var(--ink);flex:none}
+.mapfoot{display:flex;align-items:center;gap:10px;background:var(--ground);border:1px solid var(--line);border-radius:0 0 18px 18px;padding:12px 14px;text-decoration:none;color:inherit;transition:background .15s ease}
+.mapfoot:hover{background:#fff}
+.mapfoot .go{margin-left:auto;font:700 12px/1 var(--body);color:var(--chamoy);white-space:nowrap}
+.mapfoot strong{display:block;font-size:16px}
+.mapfoot span{font-size:13.5px;color:var(--ink-2)}
+.crew h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.4vw,48px);line-height:1}
+.crew p{color:var(--ink-2);font-size:17px;margin-top:12px;max-width:46ch}
+.crew .callrow{margin-top:18px;font:500 14px/1.8 var(--mono)}
+.crew .callrow a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--chamoy)}
+
+/* ---------- enterprise polish ---------- */
+body{-webkit-font-smoothing:antialiased;letter-spacing:-0.005em}
+h1,h2,h3,h4{font-family:var(--display);letter-spacing:-0.02em}
+.btn{border-radius:10px;font-weight:700;letter-spacing:.01em;padding:13px 20px;box-shadow:0 1px 2px rgba(20,26,43,.08)}
+.btn-red{background:var(--chamoy)}
+.btn-red:hover{background:#b91733}
+.btn:hover{transform:translateY(-1px)}
+.btn-line{border-color:var(--line);background:var(--paper)}
+.btn-line:hover{border-color:var(--ink)}
+.demo-bar{background:#14433d;letter-spacing:.08em;font-size:11px;padding:7px 16px;color:#aeb6c8}
+header.nav{background:rgba(255,255,255,.88);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(20,26,43,.03)}
+.nav .wrap{height:72px;gap:28px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.02em;color:var(--ink)}
+.logo .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,#14433d,#0a2b26);display:grid;place-items:center;flex:none;box-shadow:0 2px 6px rgba(210,31,60,.3)}
+.logo small{font:500 9px/1 var(--mono);letter-spacing:.24em;color:var(--ink-2);margin-top:4px}
+.nav ul{gap:26px}
+.nav ul a{font-size:14.5px;font-weight:600;letter-spacing:.01em;color:var(--ink-2);padding-block:6px}
+.nav ul a:hover{color:var(--ink)}
+.nav ul a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--chamoy)}
+.lang button{font-size:11px;padding:6px 9px}
+.lang{border-color:var(--line);border-width:1px}
+.lang button[aria-pressed="true"]{background:var(--ink)}
+.eyebrow{letter-spacing:.16em;font-size:11px;font-weight:600}
+.sec-head h2,.cat-intro h2,.crew h2,.locinfo h2{font-family:var(--display);font-weight:800}
+.sec-head h2{font-size:clamp(30px,3.6vw,42px);line-height:1.05}
+.sec-head p{font-size:16.5px}
+section{padding-block:76px}
+/* cards */
+.item,.cat-card,.qcard,.card-plain,.order-card{border-radius:14px}
+.cat-card{box-shadow:0 1px 2px rgba(20,26,43,.06),0 12px 28px -24px rgba(20,26,43,.45);border:1px solid var(--line);transition:transform .18s ease,box-shadow .18s ease}
+.cat-card:hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(20,26,43,.06),0 22px 40px -26px rgba(20,26,43,.5)}
+.cat-card h3,.item h3,.qcard h3{font-family:var(--display);font-weight:700}
+.cat-card .badge{font:600 10.5px/1 var(--mono);letter-spacing:.06em;border:1px solid var(--line)}
+.qcard{padding:14px 18px 14px 14px;border-radius:14px}
+.tab{border-radius:9px;font-size:14.5px;padding:11px 16px;font-weight:600;background:var(--paper)}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink)}
+.strip{background:#14433d;padding-block:11px}
+.strip-track{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;gap:34px;animation-duration:52s;color:#cfd5e2}
+.strip-track span::after{content:"◆";margin-left:34px;color:var(--mango);font-size:9px;vertical-align:middle}
+.price{font-family:var(--mono);font-weight:500}
+.order-card{background:var(--dusk)}
+.order-card h3{font-family:var(--display);font-weight:700;font-size:24px}
+.sizes b{color:var(--mango);font-family:var(--display);font-weight:700}
+.flav{border-radius:8px;font-size:14.5px;background:var(--paper)}
+.fgroup h4{letter-spacing:.14em}
+.fsec h2{font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-size:clamp(38px,5.4vw,66px)}
+.fsec h2 .rb{background:linear-gradient(90deg,#2ad2c9,#fdf4b5);-webkit-background-clip:text;background-clip:text}
+.stat{border-radius:12px}
+.stat b{font-family:var(--display);font-weight:700}
+.calc{border-radius:16px}
+.calc h3,.calc .total{font-family:var(--display);font-weight:800}
+.mapcard,.mapfoot{border-radius:14px 14px 0 0}
+.mapfoot{border-radius:0 0 14px 14px}
+.locinfo h2{font-size:clamp(30px,3.6vw,42px)}
+footer{background:#14433d;color:#aeb6c8}
+footer h4{font-family:var(--display);font-weight:700;letter-spacing:.02em}
+footer .legal{font-size:11px;letter-spacing:.04em}
+/* trust strip */
+.trust{background:var(--paper);border-block:1px solid var(--line);padding-block:0}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-block:30px}
+@media (max-width:820px){.trust .wrap{grid-template-columns:1fr 1fr}}
+.tcell{display:grid;gap:5px}
+.tcell b{font-family:var(--display);font-weight:800;font-size:23px;letter-spacing:-.02em}
+.tcell span{font-size:14px;color:var(--ink-2)}
+/* photo art in cards */
+.cat-card .art,.item .art{padding:0;overflow:hidden;height:auto!important;aspect-ratio:1/1}
+.cat-card .art img,.item .art img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.cat-card:hover .art img{transform:scale(1.05)}
+.order-card .art{padding:0;overflow:hidden;border-radius:10px}
+.order-card .art img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;display:block}
+.ph{position:relative;width:100%;height:100%;display:grid;place-items:center;overflow:hidden}
+.ph::after{content:attr(data-l);position:absolute;bottom:10px;left:12px;font:600 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.ph svg{width:46%;max-width:110px;opacity:.95;filter:drop-shadow(0 10px 18px rgba(0,0,0,.35))}
+.ph.g1{background:linear-gradient(140deg,#8f1226,#d21f3c)}
+.ph.g2{background:linear-gradient(140deg,#7a3c00,#f2a007)}
+.ph.g3{background:linear-gradient(140deg,#123d2c,#2f9e4f)}
+.ph.g4{background:linear-gradient(140deg,#14433d,#008b70)}
+.ph.g5{background:linear-gradient(140deg,#4a1040,#a5237c)}
+.ph.g6{background:linear-gradient(140deg,#14433d,#20655a)}
+.catbanner{margin:0 0 26px;border-radius:14px;overflow:hidden;aspect-ratio:16/7;border:1px solid var(--line)}
+.catbanner img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* testimonials */
+.testi{background:var(--ground);padding-block:80px}
+.thead{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.thead h2,.vhead h2{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.6vw,42px);letter-spacing:-.02em;margin-top:6px}
+.rating{display:flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.rating b{font-family:var(--display);font-size:32px;font-weight:800;line-height:1}
+.rating span{font-size:13px;color:var(--ink-2)}
+.stars{display:flex;gap:2px}
+.rvwrap{position:relative}
+.rvtrack{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 40px)/3);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 10px}
+.rvtrack::-webkit-scrollbar{display:none}
+@media (max-width:900px){.rvtrack{grid-auto-columns:calc((100% - 20px)/2)}}
+@media (max-width:600px){.rvtrack{grid-auto-columns:88%}}
+.rv{scroll-snap-align:start;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;gap:12px;align-content:start;box-shadow:0 12px 28px -26px rgba(20,26,43,.5)}
+.rvtop{display:flex;align-items:center;gap:12px}
+.rvtop strong{display:block;font-size:15px}
+.rvtop span{font-size:12.5px;color:var(--ink-2)}
+.av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(140deg,#14433d,#0a2b26);color:#fff!important;font:700 17px/1 var(--display)!important;flex:none}
+.src{margin-left:auto;font:600 10px/1 var(--mono)!important;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--line);padding:5px 7px;border-radius:6px}
+.rv p{font-size:15.5px;line-height:1.6;color:var(--ink)}
+.rvbtn{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--paper);box-shadow:0 6px 16px -8px rgba(20,26,43,.4);font-size:22px;cursor:pointer;z-index:2;color:var(--ink)}
+.rvbtn.prev{left:-18px}.rvbtn.next{right:-18px}
+@media (max-width:700px){.rvbtn{display:none}}
+.rvnote{margin-top:14px;font:500 11px/1.4 var(--mono);color:var(--ink-2)}
+/* visit */
+.visitus{background:var(--paper);border-top:1px solid var(--line);padding-block:80px}
+.vhead{margin-bottom:26px}
+.vcard{display:grid;grid-template-columns:1.25fr 1fr;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 24px 50px -38px rgba(20,26,43,.55);background:var(--paper)}
+@media (max-width:860px){.vcard{grid-template-columns:1fr}}
+.vmap{position:relative;display:block;min-height:380px;background:#eceae4}
+.vmap .mapart,.vmap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vmap .mapart g[opacity=".95"]{display:none}
+.vmapbtn{position:absolute;left:14px;bottom:14px;background:#fff;color:var(--ink);font-weight:700;font-size:13px;padding:9px 12px;border-radius:8px;box-shadow:0 6px 16px -8px rgba(0,0,0,.4)}
+.vinfo{padding:30px;display:grid;gap:14px;align-content:start}
+.vinfo h3{font-family:var(--display);font-weight:800;font-size:26px}
+.tag{font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--chamoy)}
+.vlist{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:10px}
+.vlist li{display:flex;align-items:center;gap:10px;color:var(--ink-2)}
+.vlist a{color:var(--ink);font-weight:600;text-decoration:none}
+.vlist a:hover{color:var(--chamoy)}
+.vhours{border-top:1px solid var(--line);padding-top:12px;font:500 13.5px/1 var(--mono)}
+.vhours div{display:flex;justify-content:space-between;padding-block:8px;color:var(--ink-2)}
+.vhours div span:first-child{font-family:var(--body);font-weight:700;color:var(--ink);font-size:14.5px}
+.vbtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.vnote{font:500 10px/1.4 var(--mono);color:var(--ink-2);letter-spacing:.06em}
+/* footer */
+footer{padding-block:60px 28px}
+.ftop{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+@media (max-width:860px){.ftop{grid-template-columns:1fr 1fr}}
+.fbrand{display:grid;gap:14px;align-content:start}
+.fbrand p{font-size:14px;max-width:34ch;color:#aeb6c8}
+.flogo{color:#fff}
+.flogo small{color:#8d96ab!important}
+.social{display:flex;gap:10px}
+.social a{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:#fff;transition:background .15s ease}
+.social a:hover{background:var(--chamoy)}
+.fcol h4{color:#fff;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 12px}
+.fcol ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:14px}
+.fcol a{color:#aeb6c8;text-decoration:none}
+.fcol a:hover{color:#fff}
+.fbottom{margin-top:44px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:#8d96ab}
+.fbottom a{color:#aeb6c8;text-decoration:none}
+</style>
+
+<style>
+/* ---------- OLIPOP-inspired restyle: cream apothecary + forest teal ---------- */
+body{letter-spacing:0;font-size:16.5px;line-height:1.6}
+h1,h2,h3,h4{font-weight:400!important;letter-spacing:0!important}
+.calc .total,.rating b,.tcell b,.stat b,.floader .mark,.logo,.success .big{font-weight:400!important}
+/* pills & radii */
+.btn{border-radius:50px;box-shadow:none;font-weight:700}
+.btn-red{background:var(--ink);box-shadow:rgba(0,0,0,.1) 0px 0px 24px 0px}
+.btn-red:hover{background:#c41e24}
+.btn-ink{background:var(--btealc);color:var(--ink)}
+.btn-ink:hover{background:#23bcb4}
+.btn-line{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{border-color:var(--fteal);color:var(--fteal)}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--fteal)}
+.tab{border-radius:50px;background:var(--paper);border-color:var(--line)}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.opt,.flav,.mango-flavs span,.seg button,.lang,.vmapbtn{border-radius:50px}
+.opt{background:var(--paper)}
+.opt[aria-pressed="true"]{background:var(--ink);border-color:var(--ink)}
+.field input,.field select{border-radius:50px;padding:11px 16px;border-color:var(--fteal)}
+.field textarea{border-radius:16px;border-color:var(--fteal)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink)}
+.qcard,.cat-card,.rv,.vcard,.card-plain,.order-card,.calc,.modal,.catbanner,.rating,.extras,.cardbox,.notice{border-radius:16px}
+.mapcard,.mapfoot{border-radius:16px 16px 0 0}.mapfoot{border-radius:0 0 16px 16px}
+.cat-hero,.hero-photo .frame{border-radius:0}
+/* flat: only the primary CTA glows */
+.cat-card,.qcard,.rv,.vcard,.mapcard{box-shadow:none;border:1px solid var(--line)}
+.cat-card:hover,.qcard:hover{transform:translateY(-3px);box-shadow:rgba(0,0,0,.08) 0px 0px 24px 0px}
+/* chrome */
+.demo-bar{background:var(--ink);color:#fdf7e7;letter-spacing:.08em}
+header.nav{background:rgba(253,247,231,.94);border-bottom:1px solid var(--line);box-shadow:none}
+.logo{color:var(--ink);font-size:20px}
+.logo .mark{border-radius:50%;box-shadow:none}
+.logo small{color:var(--fteal)}
+.nav ul a{color:var(--ink-2)}
+.nav ul a:hover,.nav ul a[aria-current="page"]{color:var(--ink)}
+.nav ul a[aria-current="page"]{box-shadow:inset 0 -2px 0 var(--fteal)}
+.lang button[aria-pressed="true"]{background:var(--ink)}
+.cart-count{background:var(--banana);color:var(--ink)}
+.strip{background:var(--ink)}
+.strip-track{color:#fdf7e7}
+.strip-track span::after{color:var(--btealc)}
+/* film hero on deep forest */
+.fsec .eyebrow{color:var(--btealc)}
+.stat{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.18);border-radius:16px}
+.stat b{color:var(--banana)}
+.stat span{color:#cfe4dc}
+.chapters button[aria-current="true"]{background:var(--btealc);border-color:var(--btealc);box-shadow:0 0 0 5px rgba(42,210,201,.22)}
+.floader .pct{color:#bcd8cf}
+/* menu */
+#menu{background:var(--ground)}
+.fgroup{border-radius:16px;padding:18px 16px}
+.fgroup:nth-of-type(6n+1){background:#e6f3ff}
+.fgroup:nth-of-type(6n+2){background:#e1f0d9}
+.fgroup:nth-of-type(6n+3){background:#fdf4b5}
+.fgroup:nth-of-type(6n+4){background:#fbdde2}
+.fgroup:nth-of-type(6n+5){background:#fde6cf}
+.fgroup:nth-of-type(6n+6){background:#e3d2ed}
+.fgroup h4{color:var(--ink)}
+.order-card{background:var(--dusk)}
+.order-card .art{border-radius:16px}
+.sizes div{border-radius:16px}
+.sizes b{color:var(--banana)}
+.extras strong{color:var(--fteal)}
+.snack .ex{color:var(--fteal)}
+.snack h4{font-family:var(--body);font-weight:700}
+.mango-flavs span{background:var(--paper);border-color:var(--line)}
+.flav{background:var(--paper)}
+/* quick cards: circle motif */
+.qart{border-radius:50%;background:var(--mint)}
+.qlink{color:var(--fteal)}
+/* catering */
+.cat-card .badge{border-radius:50px}
+.calc{border-radius:24px}
+.calc .r{background:var(--mint);color:var(--ink)}
+.calc input[type=range]{accent-color:var(--fteal)}
+.chk input{accent-color:var(--fteal)}
+.seg button[aria-pressed="true"]{background:var(--btealc);border-color:var(--btealc);color:var(--ink)}
+.guests-out{color:var(--banana)}
+.calc .lines div{border-bottom-color:rgba(17,17,20,.3)}
+summary::after{color:var(--fteal)}
+/* reviews / visit */
+.testi{background:var(--ground)}
+.visitus{background:var(--paper)}
+.src{border-radius:50px}
+.tag{color:var(--fteal)}
+.notice{background:var(--banana);border-color:#e8dd9a;color:#5a4b00}
+.success .big{color:var(--fteal)}
+.toast{background:var(--ink)}
+/* trust */
+.trust{background:var(--paper)}
+.tcell b{color:var(--ink)}
+/* footer */
+footer{background:var(--ink);color:#cfe4dc}
+.fbrand p,.fcol a,.fbottom,.fbottom a{color:#bcd8cf}
+.fcol a:hover{color:#fff}
+.social a{border-radius:50%}
+.social a:hover{background:var(--btealc);color:var(--ink)}
+.mapfoot .go{color:var(--fteal)}
+/* display face sizing */
+.sec-head h2,.cat-intro h2,.thead h2,.vhead h2,.locinfo h2{font-size:clamp(28px,3.3vw,40px)}
+.fsec h2{font-size:clamp(34px,5vw,62px)}
+</style>
+<style>
+/* ---------- THE POUR: scroll-film stage ---------- */
+section.film{position:relative;height:760vh;background:var(--ground);padding:0}
+.film .stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--ground)}
+.film canvas#fc{position:absolute;inset:0;width:100%;height:100%;display:block}
+.film .vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 45%,rgba(60,30,0,0) 60%,rgba(60,30,0,.18) 100%)}
+.film .fade{position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(0deg,var(--ground) 0%,rgba(253,247,231,.85) 40%,rgba(253,247,231,0) 100%)}
+.film .plate{position:absolute;inset:0;max-width:1200px;margin-inline:auto;padding-inline:20px;pointer-events:none}
+.beat{--dy:14px;position:absolute;left:20px;right:20px;top:50%;transform:translateY(-50%) translateY(var(--dy));max-width:560px;opacity:0;pointer-events:none;will-change:opacity,transform}
+.beat::before{content:"";position:absolute;z-index:-1;inset:-40% -18% -40% -12%;border-radius:40px;background:radial-gradient(60% 60% at 30% 50%,rgba(253,247,231,.96),rgba(253,247,231,.8) 48%,rgba(253,247,231,0) 80%)}
+.beat.right{left:auto;right:20px;margin-left:auto}
+@media (min-width:900px){.beat.right{left:52%;right:20px}}
+.beat .kicker{font:600 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--fteal)}
+.beat h1,.beat h2{font-family:var(--display);font-weight:400;color:var(--ink);line-height:.98;margin-top:14px;text-wrap:balance;letter-spacing:-.01em}
+.beat h1{font-size:clamp(48px,8vw,100px)}
+.beat h2{font-size:clamp(38px,5.8vw,72px)}
+.beat p{margin-top:18px;font-size:clamp(16px,1.5vw,19px);line-height:1.55;color:#3a3a3a;max-width:42ch}
+.beat .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.beat.on,.beat.on .btn{pointer-events:auto}
+.beat .flavs{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.beat .flavs span{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--body);padding:9px 13px 9px 9px;border-radius:50px;background:#fff;border:1px solid var(--line);color:var(--ink)}
+.beat .flavs i{width:12px;height:12px;border-radius:50%;display:block}
+.chapter{position:absolute;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;align-items:center;gap:12px;font:600 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ink);background:rgba(253,247,231,.86);border:1px solid rgba(17,17,20,.14);border-radius:50px;padding:9px 14px;z-index:3;white-space:nowrap;transition:opacity .3s}
+.chapter .bar{width:120px;height:3px;border-radius:2px;background:rgba(17,17,20,.18);overflow:hidden}
+.chapter .bar i{display:block;height:100%;width:100%;background:var(--fteal);transform:scaleX(0);transform-origin:left}
+.chapter .cue{width:10px;height:10px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg) translate(-2px,-2px);animation:bob 1.6s ease-in-out infinite}
+.floader{position:absolute;inset:0;z-index:5;background:var(--ground);display:grid;place-items:center;transition:opacity .5s ease,visibility .5s}
+.floader.gone{opacity:0;visibility:hidden}
+.floader .inner{display:grid;justify-items:center;gap:14px;color:var(--ink)}
+.floader .mark{font-family:var(--display);font-size:26px}
+.floader .bar{width:160px;height:3px;background:rgba(17,17,20,.15);border-radius:2px;overflow:hidden}
+.floader .bar i{display:block;height:100%;width:0;background:var(--fteal)}
+.floader .pct{font:500 11px/1 var(--mono);color:var(--ink-2)}
+header.nav.over{background:transparent;border-bottom-color:transparent;box-shadow:none}
+header.nav.over::before{content:"";position:absolute;inset:0 0 auto 0;height:170%;z-index:-1;pointer-events:none;background:linear-gradient(to bottom,rgba(253,247,231,.88),rgba(253,247,231,0))}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;transition:background .3s ease}
+.landing{height:60px;background:var(--ground)}
+/* ---------- phone: its own square film on top, story below ---------- */
+@media (max-width:760px){
+  section.film{height:640vh}
+  .film .stick{--filmh:min(calc((100vw - 24px)*1.18),calc(100svh - var(--navh,92px) - 290px))}
+  .film canvas#fc{inset:auto;top:calc(var(--navh,92px) + 6px);left:12px;right:12px;width:calc(100% - 24px);height:var(--filmh);border-radius:24px}
+  .film .vig,.film .fade{display:none}
+  .film .plate{padding-inline:16px}
+  .beat,.beat.right{top:calc(var(--navh,92px) + var(--filmh) + 22px);left:16px;right:16px;bottom:auto;transform:translateY(var(--dy));max-width:none}
+  .beat::before{display:none}
+  .beat .kicker{font-size:11px}
+  .beat h1{font-size:clamp(38px,11vw,52px);margin-top:10px}
+  .beat h2{font-size:clamp(32px,9.5vw,44px);margin-top:10px}
+  .beat p{font-size:15px;margin-top:10px;line-height:1.5}
+  .beat .ctas{margin-top:14px;gap:8px}.beat .ctas .btn{padding:11px 16px;font-size:14px}
+  .beat .flavs{display:none}
+  .chapter{bottom:calc(14px + env(safe-area-inset-bottom,0px));padding:7px 12px}.chapter .bar{width:70px}
+  header.nav.over{background:rgba(253,247,231,.96)}header.nav.over::before{display:none}
+}
+@media (max-width:760px) and (max-height:700px){.beat p{display:none}}
+@media (prefers-reduced-motion: reduce){
+  section.film{height:auto}.film .stick{position:relative;height:auto;min-height:0;padding-block:60px 40px;display:grid;gap:40px}
+  .film canvas#fc{position:relative;width:100%;height:auto;aspect-ratio:16/9;inset:auto}
+  .beat,.beat.right{position:relative;top:auto;left:auto;right:auto;bottom:auto;transform:none;opacity:1!important;pointer-events:auto;max-width:640px;margin-inline:auto}
+  .chapter,.film .vig,.film .fade,.floader{display:none}
+}
+
+/* ---------- after the film: presence, rhythm, arrival ---------- */
+.trust .wrap{padding-block:44px}
+.tcell b{font-size:30px}
+.quick{padding-block:72px 84px}
+.quick-grid{gap:22px}
+.qcard{padding:22px 22px 22px 18px;border-radius:24px;background:var(--paper);border:1px solid var(--line)}
+.qcard h3{font-size:24px;margin:6px 0}
+.qart{width:132px;height:132px}
+.testi{padding-block:96px}
+.testi .wrap,.visitus .wrap{min-width:0;max-width:1160px}
+.thead h2,.vhead h2{font-size:clamp(34px,4.4vw,52px)}
+.visitus{padding-block:96px 110px}
+.vcard{border-radius:24px}
+.vinfo h3{font-size:30px}
+.rise>*{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rise.in>*{opacity:1;transform:none}
+.rise.in>*:nth-child(2){transition-delay:.09s}.rise.in>*:nth-child(3){transition-delay:.18s}.rise.in>*:nth-child(4){transition-delay:.27s}
+@media (prefers-reduced-motion: reduce){.rise>*{opacity:1;transform:none;transition:none}}
+header.nav.over.on-light .logo,header.nav.over.on-light .nav ul a{color:var(--ink)}
+.btn-red{box-shadow:0 8px 24px -8px rgba(17,17,20,.45)}
+.btn-red:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(17,17,20,.5)}
+.demo-bar{position:relative;z-index:41}
+@media (max-width:700px){
+  .nav .wrap{gap:8px;row-gap:6px;padding-block:8px}
+  .logo{font-size:17px}.logo small{display:none}.logo .mark{width:28px;height:28px}
+  .cart-btn{padding:8px 12px;font-size:13px;margin-left:auto}
+  .lang{margin-left:0}.lang button{padding:5px 7px;font-size:10px}
+  .nav ul{gap:14px}.nav ul a{font-size:13.5px}
+}
+
+/* ---------- professional finish ---------- */
+body{font-size:17px;line-height:1.6;color:#2f3b37}
+h1,h2,h3,h4{font-family:var(--display);font-weight:500!important;letter-spacing:-.015em!important;font-variation-settings:"opsz" 72}
+.eyebrow,.kicker,.fgroup h4,.opt-group small,.cat-card .badge,.tag,.src,.fcol h4,.chapter,.calc .lines,.sizes div,.extras strong,.snack .ex,.sample,.hours,.week,.vhours{font-family:var(--body)!important}
+.eyebrow{font-weight:700;font-size:11.5px;letter-spacing:.14em;color:var(--fteal)}
+.price,.sum,.line .p,.calc .total,.guests-out{font-variant-numeric:tabular-nums}
+/* info bar */
+.demo-bar.topbar{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;font:500 13px/1.4 var(--body);letter-spacing:0;padding:9px 16px;color:#e6f1ec;background:var(--ink)}
+.demo-bar.topbar a{color:#fff;text-decoration:none;font-weight:600}
+.demo-bar.topbar .sep{opacity:.45}
+@media (max-width:700px){.demo-bar.topbar{font-size:12px;gap:8px}.demo-bar.topbar span:nth-child(3),.demo-bar.topbar .sep:nth-child(2){display:none}}
+/* wordmark */
+.logo{gap:10px;font-family:var(--display);font-weight:500;font-size:23px;letter-spacing:-.01em;color:var(--ink);line-height:1}
+.logo .wm em{font-style:italic;font-weight:400;color:var(--chamoy)}
+.logo .mark{width:36px;height:36px;border-radius:50%;background:var(--ink);box-shadow:none}
+.flogo{font-size:30px;color:#fff}.flogo .wm em{color:#f4b3b8}
+header.nav{border-bottom:1px solid rgba(17,17,20,.1)}
+.nav .wrap{height:76px}
+.nav ul a{font-size:15px;font-weight:500;color:var(--ink)}
+.nav ul a[aria-current="page"]{box-shadow:inset 0 -1.5px 0 var(--chamoy)}
+.lang{border:0;gap:2px}
+.lang button{font:600 12px/1 var(--body);padding:6px 8px;border-radius:50px;color:var(--ink-2)}
+.lang button[aria-pressed="true"]{background:rgba(17,17,20,.1);color:var(--ink)}
+.btn{font-weight:600;letter-spacing:0;padding:14px 24px}
+.btn-sm{padding:11px 18px}
+/* intro band */
+.intro{background:var(--paper);border-block:1px solid rgba(17,17,20,.08);padding-block:88px}
+.intro .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+@media (max-width:860px){.intro .wrap{grid-template-columns:1fr;gap:36px}.intro{padding-block:64px}}
+.intro-lede{font-family:var(--display);font-size:clamp(24px,2.6vw,34px);line-height:1.28;color:var(--ink);text-wrap:pretty;font-variation-settings:"opsz" 30}
+.intro-facts{display:grid;grid-template-columns:1fr 1fr;gap:26px 32px}
+.intro-facts div{display:grid;gap:4px;padding-left:16px;border-left:2px solid var(--btealc)}
+.intro-facts b{font-family:var(--display);font-weight:500;font-size:44px;line-height:1;color:var(--ink);letter-spacing:-.02em}
+.intro-facts b span{font-size:26px;color:var(--chamoy)}
+.intro-facts div>span{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+/* photo cards */
+.quick{padding-block:96px 100px}
+.quick-grid{grid-template-columns:repeat(3,1fr);gap:26px}
+@media (max-width:900px){.quick-grid{grid-template-columns:1fr}}
+.qcard{display:grid;grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:0;padding:0;border-radius:24px;overflow:hidden;background:var(--paper);border:1px solid rgba(17,17,20,.1);transition:transform .25s ease,box-shadow .25s ease}
+.qcard:hover{transform:translateY(-4px);box-shadow:0 30px 60px -40px rgba(17,17,20,.45)}
+.qart{width:100%;height:auto;aspect-ratio:4/3;border-radius:0;background:var(--mint)}
+.qbody{padding:26px 26px 30px;display:grid;gap:8px;align-content:start}
+.qcard h3{font-size:28px;margin:0;line-height:1.1}
+.qcard p{font-size:15.5px;color:#4f6159;line-height:1.55}
+.qlink{margin-top:10px;color:var(--ink);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:8px}
+.qlink::after{content:"";width:18px;height:1.5px;background:var(--chamoy);transition:width .2s}
+.qcard:hover .qlink::after{width:30px}
+/* reviews */
+.testi{padding-block:100px}
+.thead h2,.vhead h2,.sec-head h2,.cat-intro h2{font-size:clamp(36px,4.6vw,56px);line-height:1.02}
+.rating{border-radius:16px;border-color:rgba(17,17,20,.1);gap:14px;padding:14px 18px}
+.rating b{font-family:var(--display);font-weight:500;font-size:36px}
+.rv{border-radius:20px;padding:26px;border-color:rgba(17,17,20,.1);box-shadow:none;gap:14px}
+.rv p{font-family:var(--display);font-style:italic;font-size:19px;line-height:1.45;color:var(--ink);font-variation-settings:"opsz" 18}
+.rvtop strong{font-size:15px;font-weight:600}
+.src{border:0;background:rgba(17,17,20,.07);border-radius:50px;padding:5px 9px;font-weight:600;letter-spacing:.06em}
+.av{background:var(--ink);font-family:var(--display)!important;font-weight:500!important}
+.rvbtn{border-color:rgba(17,17,20,.12);box-shadow:none}
+/* location */
+.visitus{padding-block:100px 120px}
+.vcard{border-radius:24px;box-shadow:none;border-color:rgba(17,17,20,.1)}
+.vinfo{padding:36px;gap:16px}
+.vinfo h3{font-size:34px}
+.tag{font-weight:600;letter-spacing:.1em}
+.vlist a{font-weight:500}
+.vhours{font-size:15px}
+.vhours div span:first-child{font-weight:600}
+/* menu & catering */
+.sec-head{gap:12px;margin-bottom:34px}
+.sec-head p,.cat-intro p{font-size:18px;color:#4f6159}
+.tab{font-weight:600;font-size:15px;padding:12px 18px;border-color:rgba(17,17,20,.15)}
+.order-card{border-radius:24px;padding:26px;gap:18px}
+.order-card h3{font-size:28px}
+.sizes div{border-radius:14px;font-size:12px;font-weight:500}
+.sizes b{font-family:var(--display);font-weight:500;font-size:19px;color:#fdf4b5}
+.extras{border-radius:14px;font-size:14.5px}
+.extras strong{font-weight:700;letter-spacing:.08em;font-size:11.5px}
+.fgroup{border-radius:20px;padding:22px 20px}
+.fgroup h4{font-weight:700;font-size:11.5px;letter-spacing:.12em}
+.fgroup ul{font-size:15.5px;font-weight:500;gap:7px}
+.snack h4{font-family:var(--display);font-weight:500;font-size:21px}
+.snack p{font-size:14.5px}
+.snack .ex{font-weight:600;font-size:12px}
+.cat-card{border-radius:24px;box-shadow:none;border-color:rgba(17,17,20,.1)}
+.cat-card h3{font-size:26px}
+.cat-card .badge{font-weight:700;letter-spacing:.06em;font-size:11px;border:0}
+.calc{border-radius:28px}
+.calc h3{font-size:30px}
+.calc .total{font-weight:500;font-size:56px}
+.calc .lines{font-size:14px}
+summary{font-weight:600;font-size:18px}
+.card-plain{border-radius:20px;border:1px solid rgba(17,17,20,.12);padding:28px}
+.hours{font-size:15px;line-height:2}
+/* modals */
+.modal{border-radius:24px}
+.modal .mh h3,.drawer .dh h3{font-size:28px;font-weight:500}
+.field input,.field select,.field textarea{font-size:16px}
+.notice{font-family:var(--body);font-size:12.5px;letter-spacing:0;border-radius:12px}
+.success .big{font-size:34px;font-weight:500}
+/* footer */
+footer{padding-block:80px 36px;background:var(--ink)}
+.ftop{grid-template-columns:1.8fr 1fr 1fr 1fr;gap:40px}
+.fbrand p{font-size:15px;color:#bcd8cf;max-width:36ch;line-height:1.6}
+.fcol h4{font-family:var(--body)!important;font-weight:700!important;font-size:12px;letter-spacing:.14em;color:#8fbfb2}
+.fcol ul{font-size:15px;gap:10px}
+.fcol a{color:#e3efeb}
+.social a{border-radius:50%;width:40px;height:40px}
+.fbottom{margin-top:56px;font-size:13px;color:#8fbfb2}
+.fbottom .muted{color:#6f9d91}
+/* film beat text: serif weight */
+.beat h1,.beat h2{font-weight:500;letter-spacing:-.02em}
+.beat .kicker{font-family:var(--body);font-weight:700;font-size:11.5px;letter-spacing:.16em}
+.beat p{color:#2f3b37}
+.chapter{font-family:var(--body);font-weight:600;letter-spacing:.14em;font-size:11px}
+.floader .mark{font-weight:500;font-style:italic}
+@media (max-width:700px){
+  .nav .wrap{height:auto;padding-block:10px 8px;gap:10px;row-gap:8px;flex-wrap:wrap}
+  .logo{font-size:19px;gap:8px;flex:1 1 auto;min-width:0}.logo .mark{width:30px;height:30px}.logo small{display:none}
+  .cart-btn{order:2;margin-left:auto;padding:9px 14px;font-size:13px}
+  .lang{order:4;margin-left:auto}
+  .nav ul{order:3;width:auto;flex:1 1 auto;gap:16px;margin:0;overflow:visible}
+  .nav ul a{font-size:14px}
+}
+@media (max-width:760px){section.film{margin-top:calc(-1 * var(--navh,92px))}}
+/* ---------- v9: normal-size, neat (everything below the film) ---------- */
+body{font-size:16px}
+.landing{height:0}
+.intro{padding-block:56px;border-block:0}
+.intro .wrap{grid-template-columns:1.3fr 1fr;gap:40px}
+.intro-lede{font-family:var(--body);font-size:clamp(16px,1.3vw,18px);line-height:1.6;color:#3f4f4a;max-width:60ch;font-variation-settings:normal}
+.intro-facts{gap:18px 24px}
+.intro-facts div{gap:2px;padding-left:12px}
+.intro-facts b{font-size:26px}
+.intro-facts b span{font-size:16px}
+.intro-facts div>span{font-size:12px;letter-spacing:.05em}
+@media (max-width:860px){.intro{padding-block:44px}.intro .wrap{gap:24px}}
+.quick{padding-block:8px 64px}
+.quick-grid{gap:18px}
+.qcard{border-radius:16px}
+.qart{aspect-ratio:16/10}
+.qbody{padding:18px 18px 20px;gap:6px}
+.qcard .eyebrow{font-size:10.5px}
+.qcard h3{font-size:19px;line-height:1.2}
+.qcard p{font-size:14px;line-height:1.5}
+.qlink{font-size:13.5px;margin-top:6px}
+.testi{padding-block:56px 64px}
+.visitus{padding-block:56px 64px;background:var(--paper)}
+.thead h2,.vhead h2{font-size:clamp(26px,3vw,34px);line-height:1.1}
+.thead,.vhead{margin-bottom:22px;gap:14px}
+.rating{padding:10px 14px;gap:10px;border-radius:12px}
+.rating b{font-size:24px}
+.rating span{font-size:13px}
+.rv{border-radius:14px;padding:18px;gap:10px}
+.rv p{font-family:var(--body);font-style:normal;font-size:15px;line-height:1.55;color:#3f4f4a;font-variation-settings:normal}
+.rvtop strong{font-size:14px}.rvtop span{font-size:12.5px}
+.av{width:34px;height:34px;font-size:14px}
+.vcard{border-radius:16px}
+.vmap{min-height:300px}
+.vmap .mapart{object-fit:cover;object-position:center}
+.vinfo{padding:24px;gap:12px}
+.vinfo h3{font-size:22px}
+.vinfo .tag{font-size:11px}
+.vlist{font-size:14.5px;gap:8px}
+.vhours{font-size:14px}
+.vbtns .btn{padding:11px 18px;font-size:14px}
+.vmapbtn{font-size:12px;padding:8px 11px}
+@media (max-width:760px){.testi,.visitus{padding-block:44px 48px}.vmap{min-height:230px}.thead h2,.vhead h2{font-size:26px}}
+@media (max-width:860px){.intro .wrap{grid-template-columns:1fr}.intro-facts{grid-template-columns:1fr 1fr}}
+
+/* ---------- v10: 18th St Raspas colorway (from the logo: black + rainbow, red phone) ---------- */
+:root{--ink:#111114;--ink-2:#55555e;--dusk:#111114;--line:#e7e4de;
+  --fteal:#e0007a;--btealc:#22c3f0;--chamoy:#e3242b;--mango:#ff8c1a;--banana:#ffe66d;--mint:#eef1f6;
+  --wine:#7b2fbf;--lime:#3ac35a;--blue:#2e86ff;--pink:#ff3fa4;
+  --rb:linear-gradient(90deg,#ff2d8a 0%,#ff8c1a 22%,#ffe14d 42%,#3ac35a 60%,#22c3f0 80%,#7b2fbf 100%)}
+body{color:#26262b}
+.beat p,.qcard p,.intro-lede,.rv p,.sec-head p,.cat-intro p{color:#44444c}
+/* header & bars: black like the logo */
+.demo-bar.topbar{background:#0b0d10;color:#c9c9cf;border-bottom:1px solid #1e2126}
+.demo-bar.topbar a{color:#fff}
+header.nav,header.nav.over{background:#0b0d10;border-bottom:0}
+header.nav::after{content:"";display:block;height:3px;background:var(--rb)}
+header.nav.over::before{display:none}
+.nav ul a,.logo,.logo .wm{color:#fff}
+.nav ul a[aria-current="page"]{color:#fff!important;box-shadow:inset 0 -2px 0 var(--fteal)}
+.logo .wm em{color:#ff3fa4}
+.logo .mark{width:40px;height:40px;background:none;padding:0;overflow:hidden;border-radius:50%;box-shadow:0 0 0 1.5px rgba(255,255,255,.15)}
+.logo .mark img{width:100%;height:100%;display:block;object-fit:cover}
+.lang button{color:#c9c9cf}.lang button[aria-pressed="true"]{background:rgba(255,255,255,.14);color:#fff}
+.cart-btn{background:var(--chamoy);color:#fff;border-color:transparent}
+.cart-btn:hover{background:#c41e24}
+@media (max-width:760px){header.nav.over{background:#0b0d10}}
+/* buttons */
+.btn-red{background:var(--chamoy);color:#fff;box-shadow:0 8px 24px -12px rgba(227,36,43,.6)}
+.btn-red:hover{background:#c41e24}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:#000}
+.btn-line{border-color:var(--ink);color:var(--ink)}.btn-line:hover{border-color:var(--fteal);color:var(--fteal)}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:var(--btealc)}
+/* accents */
+.eyebrow{color:var(--fteal)}
+.intro-facts div{border-left:0;position:relative;padding-left:14px}
+.intro-facts div::before{content:"";position:absolute;left:0;top:2px;bottom:2px;width:3px;border-radius:2px;background:var(--rb);background:linear-gradient(180deg,#ff2d8a,#ff8c1a,#ffe14d,#3ac35a,#22c3f0,#7b2fbf)}
+.intro-facts b span{color:var(--fteal)}
+.qlink::after{background:var(--rb)}
+.qart{background:#0b0d10}
+.chapter .bar i,.floader .bar i{background:var(--rb)}
+.rvbtn:hover{border-color:var(--fteal);color:var(--fteal)}
+.tab[aria-selected="true"],.tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.src{background:#f1eff9;color:#5b3fa6}
+.av{background:var(--rb);color:#111}
+.tag{color:var(--fteal)}
+.sizes b{color:#ffe66d}
+.fsec h2 .rb{background:var(--rb);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* footer */
+footer{background:#0b0d10;position:relative}
+footer::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--rb)}
+.flogo .wm em{color:#ff3fa4}
+.fbrand p,.fcol a,.fbottom,.fbottom a{color:#b9b9c2}
+.fcol h4{color:#8a8a95}
+.fbottom{color:#8a8a95}.fbottom .muted{color:#6b6b76}
+.social a{background:rgba(255,255,255,.08);color:#fff}.social a:hover{background:var(--fteal)}
+/* card art: 4:3 boxes, whole photo visible */
+.qart{aspect-ratio:4/3}
+.qart img{width:100%;height:100%;object-fit:cover;object-position:center}
+/* ---------- v12: compact home cards + a little fiesta ---------- */
+.quick{position:relative;padding-block:0 56px;overflow:hidden}
+.picado{height:40px;margin:0 0 20px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='40' viewBox='0 0 300 40'><path d='M0 4 Q75 16 150 4 T300 4' fill='none' stroke='%23b9b3a6' stroke-width='1'/><g transform='translate(14 6)'><path d='M0 0h22v18l-3 3 3 3-3 3H3l-3-3 3-3-3-3z' fill='%23ff2d8a'/><g fill='%23fdf7e7' opacity='.7'><circle cx='11' cy='8' r='2.6'/><rect x='5' y='13' width='12' height='1.4' rx='.7'/><circle cx='5' cy='5' r='1.1'/><circle cx='17' cy='5' r='1.1'/></g></g><g transform='translate(64 9)'><path d='M0 0h22v18l-3 3 3 3-3 3H3l-3-3 3-3-3-3z' fill='%23ffe14d'/><g fill='%23fdf7e7' opacity='.7'><circle cx='11' cy='8' r='2.6'/><rect x='5' y='13' width='12' height='1.4' rx='.7'/><circle cx='5' cy='5' r='1.1'/><circle cx='17' cy='5' r='1.1'/></g></g><g transform='translate(114 11)'><path d='M0 0h22v18l-3 3 3 3-3 3H3l-3-3 3-3-3-3z' fill='%2322c3f0'/><g fill='%23fdf7e7' opacity='.7'><circle cx='11' cy='8' r='2.6'/><rect x='5' y='13' width='12' height='1.4' rx='.7'/><circle cx='5' cy='5' r='1.1'/><circle cx='17' cy='5' r='1.1'/></g></g><g transform='translate(164 12)'><path d='M0 0h22v18l-3 3 3 3-3 3H3l-3-3 3-3-3-3z' fill='%23ff8c1a'/><g fill='%23fdf7e7' opacity='.7'><circle cx='11' cy='8' r='2.6'/><rect x='5' y='13' width='12' height='1.4' rx='.7'/><circle cx='5' cy='5' r='1.1'/><circle cx='17' cy='5' r='1.1'/></g></g><g transform='translate(214 11)'><path d='M0 0h22v18l-3 3 3 3-3 3H3l-3-3 3-3-3-3z' fill='%233ac35a'/><g fill='%23fdf7e7' opacity='.7'><circle cx='11' cy='8' r='2.6'/><rect x='5' y='13' width='12' height='1.4' rx='.7'/><circle cx='5' cy='5' r='1.1'/><circle cx='17' cy='5' r='1.1'/></g></g><g transform='translate(264 9)'><path d='M0 0h22v18l-3 3 3 3-3 3H3l-3-3 3-3-3-3z' fill='%237b2fbf'/><g fill='%23fdf7e7' opacity='.7'><circle cx='11' cy='8' r='2.6'/><rect x='5' y='13' width='12' height='1.4' rx='.7'/><circle cx='5' cy='5' r='1.1'/><circle cx='17' cy='5' r='1.1'/></g></g></svg>") repeat-x center top;opacity:.85}
+.serape{height:4px;margin-top:40px;background:repeating-linear-gradient(90deg,#ff2d8a 0 34px,#ff8c1a 34px 68px,#ffe14d 68px 102px,#3ac35a 102px 136px,#22c3f0 136px 170px,#7b2fbf 170px 204px);opacity:.85}
+.quick-grid{gap:16px}
+.qcard{grid-template-columns:132px 1fr;grid-template-rows:auto;gap:16px;align-items:center;padding:12px 16px 12px 12px;border-radius:18px;background:var(--paper);border:1px solid var(--line);box-shadow:0 1px 0 rgba(17,17,20,.03)}
+.qcard:hover{transform:translateY(-2px);box-shadow:0 18px 36px -26px rgba(17,17,20,.5)}
+.qart{width:132px;height:132px;aspect-ratio:1;border-radius:14px;overflow:hidden;background:#0b0d10;outline:3px solid #fff;outline-offset:-3px}
+.qart img{width:100%;height:100%;object-fit:cover}
+.qbody{padding:0;gap:4px}
+.qcard .eyebrow{font-size:10px}
+.qcard h3{font-size:18px;line-height:1.15}
+.qcard p{font-size:13.5px;line-height:1.45}
+.qlink{font-size:13px;margin-top:4px}
+@media (max-width:900px){.quick-grid{grid-template-columns:1fr}.qcard{grid-template-columns:110px 1fr}.qart{width:110px;height:110px}}
+/* catering carousel: real photos */
+.cat-hero{height:440px;background:#0b0d10}
+.slide{padding-bottom:44px}
+.slidebg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(0,0,0,.7) 100%)}
+.slide .wrap{position:relative;z-index:1}
+.slide .eyebrow{color:#ffe14d}
+.slide h3{font-weight:500!important;text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.slide .btn-ink{background:var(--chamoy);color:#fff}
+.car-ctrl button{background:rgba(0,0,0,.35);border-color:rgba(255,255,255,.8)}.dots button{background:transparent}.dots button[aria-current="true"]{background:#fff}
+@media (max-width:700px){.cat-hero{height:360px}}
+</style>
+
+
+<div class="demo-bar topbar"><span id="todayHours">Open today 11:30 am – 10 pm</span><span class="sep">·</span><span>502 18th St, Hondo, TX</span><span class="sep">·</span><a href="tel:+18303647009">(830) 364-7009</a></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#home"><span class="mark"><img src="img/logo128.png" alt="" width="40" height="40"></span><span class="wm">18th Street <em>Raspas</em></span></a>
+    <ul id="navLinks">
+      <li><a href="#menu" data-i18n="nMenu">Menu</a></li>
+      <li><a href="#catering" data-i18n="nCatering">Catering</a></li>
+      <li><a href="#contact" data-i18n="nVisit">Contact</a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="langEn" aria-pressed="true">EN</button><button id="langEs" aria-pressed="false">ES</button>
+    </div>
+    <button class="btn btn-red btn-sm cart-btn" id="openCart"><span data-i18n="order">Order Now</span><span class="cart-count" id="cartCount" hidden>0</span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="view" id="home">
+<section class="film" id="film" aria-label="18th Street Raspas">
+  <div class="stick">
+    <canvas id="fc" aria-hidden="true"></canvas>
+    <div class="vig" aria-hidden="true"></div>
+    <div class="fade" id="ffade" aria-hidden="true"></div>
+    <div class="plate">
+      <div class="beat on" data-in="-0.1" data-peak="0" data-out="0.14">
+        <span class="kicker">Hondo, Texas · Raspas &amp; Mangonadas</span>
+        <h1>18th Street Raspas</h1>
+        <p>Sixty-some syrups on the wall, ice shaved fluffy to order, and chamoy on whatever you want it on. Drive up, roll the window down, say the word.</p>
+        <div class="ctas"><a class="btn btn-red" href="#menu">Order ahead for pickup</a><a class="btn btn-line" href="#catering">Book our booth</a></div>
+      </div>
+      <div class="beat right" data-in="0.16" data-peak="0.24" data-out="0.34">
+        <span class="kicker">The syrup wall</span>
+        <h2>Pick one.<br>Or stack three.</h2>
+        <p>Tiger Blood, Blue Eagle, Dill Pickle, Wedding Cake, Tamarindo. Every bottle on the wall is on the menu, and any three of them fit in one cup.</p>
+        <div class="flavs"><span><i style="background:#d32737"></i>Tiger Blood</span><span><i style="background:#1d7fe0"></i>Blue Eagle</span><span><i style="background:#6bbf4a"></i>Dill Pickle</span><span><i style="background:#f4ead8"></i>Wedding Cake</span><span><i style="background:#8a4b22"></i>Tamarindo</span></div>
+      </div>
+      <div class="beat" data-in="0.38" data-peak="0.47" data-out="0.57">
+        <span class="kicker">The ice</span>
+        <h2>Shaved fine.<br>Never crunchy.</h2>
+        <p>Fluffy ice drinks the syrup instead of letting it sink to the bottom, so the last spoonful tastes like the first.</p>
+      </div>
+      <div class="beat right" data-in="0.60" data-peak="0.69" data-out="0.79">
+        <span class="kicker">Extras · 50¢ each</span>
+        <h2>Loaded, if<br>you want it.</h2>
+        <p>Lechera, a scoop of ice cream, diced pickle, an extra cup for sharing. Extra chile powder and extra Lucas are on the house.</p>
+      </div>
+      <div class="beat" data-in="0.84" data-peak="0.92" data-out="2">
+        <span class="kicker">Ready at the window</span>
+        <h2>502 18th St,<br>Hondo.</h2>
+        <p>Open till 10 on weeknights and 11 on weekends. Order online and it's waiting when you pull up.</p>
+        <div class="ctas"><a class="btn btn-red" href="#menu">See the menu</a><a class="btn btn-line" href="#contact">Directions &amp; hours</a></div>
+      </div>
+    </div>
+    <div class="chapter" id="chapter" aria-hidden="true"><span id="chLabel">The wall</span><span class="bar"><i id="chBar"></i></span><span class="cue"></span></div>
+    <div class="floader" id="floader"><div class="inner"><span class="mark">18th Street Raspas</span><div class="bar"><i id="fbar"></i></div><span class="pct" id="fpct">0%</span></div></div>
+  </div>
+</section>
+<div class="landing" aria-hidden="true"></div>
+
+<section class="intro">
+  <div class="wrap">
+    <p class="intro-lede">A drive-up raspa stand on 18th Street, run the way it's always been run: ice shaved to order, syrup poured heavy, and a wall of flavors long enough that the regulars still haven't tried them all.</p>
+    <div class="intro-facts">
+      <div><b>60<span>+</span></b><span>syrup flavors</span></div>
+      <div><b>4</b><span>cup sizes</span></div>
+      <div><b>21</b><span>snacks &amp; antojitos</span></div>
+      <div><b>10</b><span>aguas frescas</span></div>
+    </div>
+  </div>
+</section>
+<section class="quick">
+  <div class="picado" aria-hidden="true"></div>
+  <div class="wrap quick-grid">
+    <a class="qcard" href="#menu"><div class="qart"><img src="img/p_two.webp" alt="Two raspas in clear cups" width="1200" height="900" loading="lazy" decoding="async"></div><div class="qbody"><span class="eyebrow">Order ahead</span><h3>Raspas &amp; Mangonadas</h3><p>Sixty-some flavors, loaded Mangonadas, snacks and aguas. Pay online and pick up at the window.</p><span class="qlink">See the menu</span></div></a>
+    <a class="qcard" href="#catering"><div class="qart"><img src="img/party.webp" alt="A raspa station at a backyard quinceañera, guests holding rainbow raspas" width="1600" height="1194" loading="lazy" decoding="async"></div><div class="qbody"><span class="eyebrow">Catering</span><h3>Bring the stand to your party</h3><p>Party packs, a Mangonada bar, or our crew and tent at your quince, wedding or school day.</p><span class="qlink">Plan an event</span></div></a>
+    <a class="qcard" href="#contact"><div class="qart"><img src="img/event.webp" alt="Neighbors lined up at the 18th Street stand on a summer evening" width="1600" height="1200" loading="lazy" decoding="async"></div><div class="qbody"><span class="eyebrow">Visit</span><h3>502 18th Street</h3><p>Drive-thru window and outdoor seating in Hondo. Call, text or WhatsApp, and follow @18st_raspas for pop-ups.</p><span class="qlink">Hours &amp; directions</span></div></a>
+  </div>
+  <div class="serape" aria-hidden="true"></div>
+</section>
+<section class="visitus" id="top">
+  <div class="wrap">
+    <div class="vhead"><span class="eyebrow">Visit us</span><h2>Location</h2></div>
+    <div class="vcard">
+      <a class="vmap" href="https://www.google.com/maps/search/?api=1&query=502+18th+St,+Hondo,+TX+78861" target="_blank" rel="noopener" aria-label="Open 502 18th St, Hondo TX in Google Maps"><img class="mapart" src="img/map.webp" alt="Satellite view of 502 18th Street at Avenue E, Hondo, Texas" width="1280" height="960" loading="lazy">
+        <span class="vmapbtn">Open in Google Maps ↗</span>
+      </a>
+      <div class="vinfo">
+        <h3>18th Street Raspas</h3>
+        <span class="tag">Drive-thru window · Outdoor seating</span>
+        <ul class="vlist">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><a href="https://www.google.com/maps/search/?api=1&query=502+18th+St,+Hondo,+TX+78861" target="_blank" rel="noopener">502 18th St, Hondo, TX 78861</a></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+18303647009">(830) 364-7009</a></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg><a href="mailto:18straspas@gmail.com">18straspas@gmail.com</a></li>
+        </ul>
+        <div class="vhours">
+          <div><span>Mon – Thu</span><span>11:30 am – 10 pm</span></div>
+          <div><span>Fri – Sat</span><span>11:30 am – 11 pm</span></div>
+          <div><span>Sunday</span><span>11:30 am – 11 pm</span></div>
+        </div>
+        <div class="vbtns">
+          <a class="btn btn-red" href="#menu">View Menu</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=502+18th+St,+Hondo,+TX+78861" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="testi" id="reviews">
+  <div class="wrap">
+    <div class="thead">
+      <div><span class="eyebrow">Testimonials</span><h2>What Hondo is saying</h2></div>
+      <div class="rating"><b>4.8</b><div><div class="stars"><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg></div><span>63 customer reviews</span></div></div>
+    </div>
+    <div class="rvwrap">
+      <button class="rvbtn prev" aria-label="Previous reviews">‹</button>
+      <div class="rvtrack" id="rvtrack"><article class="rv"><div class="rvtop"><span class="av" aria-hidden="true">S</span><div><strong>Susan J.</strong><span>Mar 2024</span></div><span class="src">Yelp</span></div><div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg></div><p>“Drive Through Only! Be prepared to wait! Lots of choices and big scoops of ice cream! Really the only place in town for ice cream.”</p></article><article class="rv"><div class="rvtop"><span class="av" aria-hidden="true">E</span><div><strong>Elisa V.</strong><span>Feb 2022</span></div><span class="src">Yelp</span></div><div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg></div><p>“Highly recommend,, the chili cheese french fries are so good .. the funnel cake taste better than the fair”</p></article><article class="rv"><div class="rvtop"><span class="av" aria-hidden="true">M</span><div><strong>Magdalena M.</strong><span>Aug 2022</span></div><span class="src">Yelp</span></div><div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg></div><p>“treats are always yummy .. and the service is outstanding.. we drive from Castroville to get late snacks”</p></article><article class="rv"><div class="rvtop"><span class="av" aria-hidden="true">P</span><div><strong>Patty M.</strong><span>May 2020</span></div><span class="src">Yelp</span></div><div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg><svg viewBox="0 0 20 20" width="16" height="16"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z" fill="#f2a007"/></svg></div><p>“Pretty awesome snow comes it's shaved ice and they're done precisely the right way. They're not overpriced...”</p></article></div>
+      <button class="rvbtn next" aria-label="Next reviews">›</button>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- MENU -->
+<section id="menu" class="view" hidden>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="mEy">Order ahead for pickup</span>
+      <h2 data-i18n="mH">The menu</h2>
+      <p data-i18n="mP">Pick a category, build it your way, and pay online. We'll have it ready at the window.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Menu categories" data-tabs>
+      <button class="tab" role="tab" id="t-raspas" aria-controls="p-raspas" aria-selected="true">Raspas</button>
+      <button class="tab" role="tab" id="t-mango" aria-controls="p-mango" aria-selected="false">Mangonadas</button>
+      <button class="tab" role="tab" id="t-snacks" aria-controls="p-snacks" aria-selected="false">Snacks</button>
+      <button class="tab" role="tab" id="t-aguas" aria-controls="p-aguas" aria-selected="false">Aguas Frescas</button>
+    </div>
+
+    <div role="tabpanel" id="p-raspas" aria-labelledby="t-raspas">
+      <div class="panel-grid">
+        <aside class="order-card">
+          <h3>Raspas Shaved Ice</h3>
+          <div class="art" id="raspaArt"></div>
+          <div class="sizes" id="raspaSizes"></div>
+          <div class="extras"><strong>EXTRAS · $0.50</strong>Ice Cream · Lechera · Diced Pickle · Extra Cup<br><span style="color:var(--ink-2);font-size:13px">Ask for extra chile powder or extra Lucas</span></div>
+          <button class="btn btn-red" data-add="raspa">Build a Raspa</button>
+        </aside>
+        <div class="fgroups" id="flavorGroups"></div>
+      </div>
+    </div>
+
+    <div role="tabpanel" id="p-mango" aria-labelledby="t-mango" hidden>
+      <div class="panel-grid">
+        <aside class="order-card">
+          <h3>Mangonadas</h3>
+          <div class="art" id="mangoArt"></div>
+          <div class="sizes" id="mangoSizes"></div>
+          <button class="btn btn-red" data-add="mango">Build a Mangonada</button>
+        </aside>
+        <div style="display:grid;gap:22px">
+          <div class="mango-flavs"><span style="color:#ff9f00">Mango</span><span style="color:#e0521b">Mango Loco</span><span style="color:#e6334a">Strawberry</span><span style="color:#2f9e4f">Lime</span><span style="color:#ff5d73">Watermelon</span></div>
+          <p style="font-size:18px;max-width:48ch">Every Mangonada comes loaded with <strong>red chamoy, chile powder, a tarugo and sour cherry</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" id="p-snacks" aria-labelledby="t-snacks" hidden>
+      <div class="snacks" id="snackList"></div>
+    </div>
+
+    <div role="tabpanel" id="p-aguas" aria-labelledby="t-aguas" hidden>
+      <div class="panel-grid">
+        <aside class="order-card">
+          <h3>Aguas Frescas</h3>
+          <div class="art" id="aguaArt"></div>
+          <button class="btn btn-red" data-add="agua">Order an Agua</button>
+        </aside>
+        <div class="flavors" id="aguaList"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- CATERING (Bahama Buck's structure) -->
+<section id="catering" class="view" hidden>
+  <div class="cat-hero" id="carousel" aria-roledescription="carousel" aria-label="Catering highlights">
+    <div class="slide on"><img class="slidebg" src="img/slide1.webp" alt="" width="1600" height="893" loading="lazy" decoding="async">
+      <div class="wrap"><span class="eyebrow">Catering</span><h3>Bring the raspa stand to your party</h3><div><a href="#cat-packs" class="btn btn-ink">Order Now</a></div></div>
+    </div>
+    <div class="slide"><img class="slidebg" src="img/slide2.webp" alt="" width="1600" height="893" loading="lazy" decoding="async">
+      <div class="wrap"><span class="eyebrow">Quinceañeras · Weddings · Birthdays</span><h3>A Mangonada bar your guests will talk about</h3><div><a href="#cat-packs" class="btn btn-ink">See Packages</a></div></div>
+    </div>
+    <div class="slide"><img class="slidebg" src="img/slide3.webp" alt="" width="1600" height="893" loading="lazy" decoding="async">
+      <div class="wrap"><span class="eyebrow">Schools · Offices · Teams</span><h3>Cool off the whole crew</h3><div><a href="#calc-panel" class="btn btn-ink">Price It Out</a></div></div>
+    </div>
+    <div class="car-ctrl">
+      <button id="prev" aria-label="Previous slide">‹</button>
+      <div class="dots" id="dots"></div>
+      <button id="next" aria-label="Next slide">›</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="cat-intro">
+      <div><h2>18th Street Catering</h2><p>Party packs, a Mangonada bar, or our crew and booth right at your event.</p></div>
+      <button class="btn btn-red" data-quote="">Request a Quote</button>
+    </div>
+    <figure class="catbanner"><img src="img/p_wide.webp" alt="Raspas, Mangonadas and fruit cups laid out at an outdoor party" loading="lazy"></figure>
+    <div class="tabs" role="tablist" aria-label="Catering" data-tabs>
+      <button class="tab" role="tab" id="t-packs" aria-controls="cat-packs" aria-selected="true">Packages</button>
+      <button class="tab" role="tab" id="t-calc" aria-controls="calc-panel" aria-selected="false">Price Estimator</button>
+      <button class="tab" role="tab" id="t-faq" aria-controls="faq-panel" aria-selected="false">FAQ</button>
+    </div>
+    <div class="cat-grid" id="cat-packs" role="tabpanel" aria-labelledby="t-packs"></div>
+    <div id="calc-panel" role="tabpanel" aria-labelledby="t-calc" hidden>
+
+    <div class="calc" id="calc">
+      <div class="l">
+        <div><span class="eyebrow" style="color:var(--mango)">Party pack estimator</span><h3>How many are we feeding?</h3></div>
+        <div>
+          <label for="guests">Guests <span class="guests-out" id="guestsOut">60</span></label>
+          <input type="range" id="guests" min="20" max="400" step="10" value="60">
+        </div>
+        <div>
+          <span class="flabel" style="display:block;margin-bottom:8px">Package</span>
+          <div class="seg" id="pkgSeg"></div>
+        </div>
+        <div>
+          <span class="flabel" style="display:block;margin-bottom:8px">Add-ons</span>
+          <label class="chk"><input type="checkbox" id="addTop" checked> Chamoy, Lucas &amp; lechera bar (+$0.75/guest)</label>
+          <label class="chk"><input type="checkbox" id="addStaff"> On-site attendant, 2 hrs (+$150)</label>
+        </div>
+      </div>
+      <div class="r">
+        <span class="eyebrow">Estimated total</span>
+        <div class="total" id="calcTotal">$0</div>
+        <div class="lines" id="calcLines"></div>
+        <button class="btn btn-ink" id="calcQuote">Request this quote</button>
+      </div>
+    </div>
+    </div>
+
+    <div class="faq" id="faq-panel" role="tabpanel" aria-labelledby="t-faq" hidden>
+      <details><summary>How far ahead should I book?</summary><p>At least 7 days for party packs and 2–3 weeks for the on-site cart, especially on weekends in summer.</p></details>
+      <details><summary>Do you deliver?</summary><p>Yes, within a set radius of the shop. Delivery fees depend on distance and are confirmed with your quote.</p></details>
+      <details><summary>How is the ice kept from melting?</summary><p>Party packs arrive in insulated coolers with ice shaved fresh right before drop-off. Serve within about 90 minutes for the best texture.</p></details>
+      <details><summary>Do I pay a deposit?</summary><p>A 25% deposit locks your date. The balance is due the day before the event, paid online.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section id="contact" class="view" hidden>
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Come see us</span><h2>Find 18th St</h2><p>Stop by the window on 18th Street, or catch our booth at events around the area.</p></div>
+    <div class="visit">
+      <div class="card-plain">
+        <strong style="font-size:18px">Contact</strong>
+        <div class="hours">
+          <div><span>Phone</span><a href="tel:+18303647009">(830) 364-7009</a></div>
+          <div><span>WhatsApp</span><a href="https://wa.me/18303849733" target="_blank" rel="noopener">(830) 384-9733</a></div>
+          <div><span>Email</span><a href="mailto:18straspas@gmail.com">18straspas@gmail.com</a></div>
+          <div><span>Instagram</span><a href="https://instagram.com/18st_raspas" target="_blank" rel="noopener">@18st_raspas</a></div>
+          <div><span>Facebook</span><span>18th Street Raspas</span></div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px"><a class="btn btn-red btn-sm" href="tel:+18303647009">Call Us</a><a class="btn btn-line btn-sm" href="https://wa.me/18303849733" target="_blank" rel="noopener">Message on WhatsApp</a></div>
+      </div>
+      <div class="card-plain">
+        <strong style="font-size:18px">Location &amp; hours</strong>
+        <span style="color:var(--ink-2)">502 18th St, Hondo, TX 78861 · Outdoor seating</span>
+        <div class="hours">
+          <div><span>Mon – Thu</span><span>11:30 am – 10 pm</span></div>
+          <div><span>Fri – Sat</span><span>11:30 am – 11 pm</span></div>
+          <div><span>Sunday</span><span>11:30 am – 11 pm</span></div>
+        </div>
+        <div style="margin-top:6px"><a class="btn btn-line btn-sm" href="https://www.google.com/maps/dir/?api=1&destination=502+18th+St,+Hondo,+TX+78861" target="_blank" rel="noopener">Open in Google Maps</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="ftop">
+      <div class="fbrand">
+        <a class="logo flogo" href="#home"><span class="mark"><img src="img/logo128.png" alt="" width="40" height="40"></span><span class="wm">18th Street <em>Raspas</em></span></a>
+        <p>Raspas, Mangonadas, snacks and aguas frescas — made to order at the window on 18th Street.</p>
+        <div class="social">
+          <a href="https://www.facebook.com/18STRASPAS/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+          <a href="https://instagram.com/18st_raspas" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a>
+          <a href="https://wa.me/18303849733" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+        </div>
+      </div>
+      <nav class="fcol" aria-label="Footer"><h4>Explore</h4><ul><li><a href="#home">Home</a></li><li><a href="#menu">Menu</a></li><li><a href="#catering">Catering</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+      <div class="fcol"><h4>Order</h4><ul><li><a href="#menu">Order ahead for pickup</a></li><li><a href="#catering">Book an event</a></li><li><a href="tel:+18303647009">Call (830) 364-7009</a></li></ul></div>
+      <div class="fcol"><h4>Visit</h4><ul><li><a href="https://www.google.com/maps/search/?api=1&query=502+18th+St,+Hondo,+TX+78861" target="_blank" rel="noopener">502 18th St<br>Hondo, TX 78861</a></li><li>Mon–Thu 11:30a–10p</li><li>Fri–Sun 11:30a–11p</li></ul></div>
+    </div>
+    <div class="fbottom"><span>© 2026 18th Street Raspas · Hondo, Texas · <span class="muted">Preview site — orders and payments are simulated</span></span><span><a href="#menu">Menu</a> · <a href="#catering">Catering</a> · <a href="#contact">Contact</a></span></div>
+  </div>
+</footer>
+
+<div id="modalRoot"></div>
+<script>window.FILM={"frames": 462, "seam": "#fdf7e7", "d": {"dir": "sd/", "cols": 3, "rows": 2, "fw": 960, "fh": 540, "sheets": 77}, "m": {"dir": "sm/", "cols": 3, "rows": 2, "fw": 540, "fh": 540, "sheets": 77}};</script>
+<script>(function(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -10% 0px",threshold:.1});document.querySelectorAll(".intro .wrap,.quick-grid,.testi .wrap,.visitus .wrap").forEach(s=>{s.classList.add("rise");io.observe(s)})})();</script>
+<script>(function(){var d=new Date().getDay();var e=document.getElementById("todayHours");if(e)e.textContent=(d>=5||d===0)?"Open today 11:30 am – 11 pm":"Open today 11:30 am – 10 pm"})();</script>
+
+
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const money=n=>'$'+n.toFixed(2);
+
+/* ---------- realistic raspa renderer (canvas) ---------- */
+function cup(colors,size=1,opts={}){
+  const w=Math.round(110*size),h=Math.round(140*size);
+  return `<canvas class="rcup" width="${w}" height="${h}" style="width:${w}px;height:${h}px" data-c="${colors.join(',')}" data-o="${Object.keys(opts).filter(k=>opts[k]).join(',')}" role="img" aria-label="Raspa in a clear cup"></canvas>`;
+}
+function rng(seed){let a=0;for(const ch of seed)a=(a*31+ch.charCodeAt(0))|0;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function hexA(h,a){h=h.replace('#','');if(h.length===3)h=h.split('').map(x=>x+x).join('');const n=parseInt(h,16);return `rgba(${n>>16&255},${n>>8&255},${n&255},${a})`}
+function shade(h,f){h=h.replace('#','');if(h.length===3)h=h.split('').map(x=>x+x).join('');const n=parseInt(h,16);const c=[n>>16&255,n>>8&255,n&255].map(v=>Math.max(0,Math.min(255,Math.round(f<0?v*(1+f):v+(255-v)*f))));return `rgb(${c.join(',')})`}
+function renderRaspa(cv){
+  if(cv.dataset.done)return;cv.dataset.done=1;
+  const W=parseFloat(cv.style.width),H=parseFloat(cv.style.height),D=Math.min(2,window.devicePixelRatio||1)*1.5;
+  cv.width=W*D;cv.height=H*D;const x=cv.getContext('2d');x.scale(D,D);
+  const C=cv.dataset.c.split(','),O=cv.dataset.o.split(','),R=rng(cv.dataset.c+cv.dataset.o),s=W/110;
+  const cx=W/2,rimY=H*.47,botY=H*.94,tH=W*.34,bH=W*.25,domeH=H*.34,rx=tH*1.06;
+  // shadow
+  x.save();x.filter='blur(4px)';x.fillStyle='rgba(0,0,0,.35)';x.beginPath();x.ellipse(cx,botY+2*s,bH*1.35,4*s,0,0,7);x.fill();x.restore();
+  // cup path
+  const cupP=()=>{x.beginPath();x.moveTo(cx-tH,rimY);x.lineTo(cx+tH,rimY);x.lineTo(cx+bH,botY-3*s);x.quadraticCurveTo(cx+bH,botY,cx+bH-4*s,botY);x.lineTo(cx-bH+4*s,botY);x.quadraticCurveTo(cx-bH,botY,cx-bH,botY-3*s);x.closePath()};
+  x.save();cupP();x.clip();
+  let g=x.createLinearGradient(0,rimY,0,botY);g.addColorStop(0,shade(C[0],-.05));g.addColorStop(.45,C[1]||C[0]);g.addColorStop(1,shade(C[2]||C[0],-.25));x.fillStyle=g;x.fillRect(0,rimY,W,botY-rimY);
+  for(let i=0;i<W*H/9;i++){const px=cx-tH+R()*tH*2,py=rimY+R()*(botY-rimY);x.fillStyle=R()<.8?`rgba(255,255,255,${.05+R()*.18})`:`rgba(0,0,0,${.03+R()*.06})`;x.beginPath();x.arc(px,py,(.4+R()*1.1)*s,0,7);x.fill()}
+  // syrup pooling streaks inside
+  for(let i=0;i<5;i++){const px=cx-tH*.8+R()*tH*1.6;x.strokeStyle=hexA(C[i%C.length],.35);x.lineWidth=(3+R()*5)*s;x.beginPath();x.moveTo(px,rimY);x.bezierCurveTo(px+8*s*(R()-.5),rimY+20*s,px+10*s*(R()-.5),rimY+40*s,px+6*s*(R()-.5),botY);x.stroke()}
+  // plastic: highlight + edge shade + ridges
+  g=x.createLinearGradient(cx-tH,0,cx+tH,0);g.addColorStop(0,'rgba(0,0,0,.18)');g.addColorStop(.1,'rgba(255,255,255,.55)');g.addColorStop(.18,'rgba(255,255,255,.12)');g.addColorStop(.3,'rgba(255,255,255,0)');g.addColorStop(.78,'rgba(255,255,255,.06)');g.addColorStop(.86,'rgba(255,255,255,.28)');g.addColorStop(1,'rgba(0,0,0,.28)');x.fillStyle=g;x.fillRect(0,rimY,W,botY-rimY);
+  for(let yy=rimY+6*s;yy<botY-4*s;yy+=7*s){x.strokeStyle='rgba(255,255,255,.14)';x.lineWidth=.8*s;x.beginPath();x.moveTo(cx-tH,yy);x.quadraticCurveTo(cx,yy+3*s,cx+tH,yy);x.stroke()}
+  // condensation
+  for(let i=0;i<55;i++){const py=rimY+8*s+R()*(botY-rimY-12*s),k=(py-rimY)/(botY-rimY),half=tH+(bH-tH)*k,px=cx-half*.92+R()*half*1.84,r=(.6+R()*1.9)*s;
+    x.fillStyle='rgba(255,255,255,.22)';x.beginPath();x.arc(px,py,r,0,7);x.fill();x.fillStyle='rgba(0,0,0,.12)';x.beginPath();x.arc(px+r*.3,py+r*.35,r*.7,0,7);x.fill();x.fillStyle='rgba(255,255,255,.8)';x.beginPath();x.arc(px-r*.35,py-r*.35,r*.3,0,7);x.fill()}
+  x.restore();
+  cupP();x.strokeStyle='rgba(255,255,255,.45)';x.lineWidth=1*s;x.stroke();
+  // dome path with lumps
+  const pts=[];for(let i=0;i<=60;i++){const t=Math.PI-i/60*Math.PI,n=.035*Math.sin(t*7+R()*.4)+.02*Math.sin(t*13)+.015*(R()-.5);pts.push([cx+Math.cos(t)*rx*(1+n*.5),rimY-Math.sin(t)*domeH*(1+n)])}
+  const domeP=()=>{x.beginPath();x.moveTo(pts[0][0],pts[0][1]);for(let i=1;i<pts.length;i++)x.lineTo(pts[i][0],pts[i][1]);x.ellipse(cx,rimY,rx,5*s,0,0,Math.PI);x.closePath()};
+  x.save();domeP();x.clip();
+  x.fillStyle=C[0];x.fillRect(0,0,W,rimY+6*s);
+  const blobs=[[cx-rx*.55,rimY-domeH*.35,C[0]],[cx+rx*.05,rimY-domeH*.8,C[1]||C[0]],[cx+rx*.6,rimY-domeH*.3,C[2]||C[1]||C[0]]];
+  blobs.forEach(([bx,by,c])=>{const rg=x.createRadialGradient(bx,by,0,bx,by,rx*.95);rg.addColorStop(0,c);rg.addColorStop(.55,hexA(c.startsWith('#')?c:'#ffffff',.85));rg.addColorStop(1,hexA(c.startsWith('#')?c:'#ffffff',0));x.fillStyle=rg;x.fillRect(0,0,W,rimY+6*s)});
+  // shaved ice grain
+  const top=rimY-domeH*1.05;
+  for(let i=0;i<W*H/3;i++){const px=cx-rx+R()*rx*2,py=top+R()*(rimY-top+6*s),r=(.3+R()*1.1)*s,v=R();
+    x.fillStyle=v<.7?`rgba(255,255,255,${.04+R()*.2})`:v<.93?`rgba(0,0,0,${.03+R()*.07})`:hexA(C[Math.floor(R()*C.length)],.2+R()*.25);
+    x.beginPath();x.ellipse(px,py,r*1.3,r,R()*3,0,7);x.fill()}
+  for(let i=0;i<W*H/40;i++){const px=cx-rx+R()*rx*2,py=top+R()*(rimY-top);x.fillStyle=`rgba(255,255,255,${.6+R()*.4})`;x.beginPath();x.arc(px,py,(.25+R()*.45)*s,0,7);x.fill()}
+  // lighting
+  let rg=x.createRadialGradient(cx-rx*.35,rimY-domeH*.75,0,cx-rx*.35,rimY-domeH*.75,rx*.9);rg.addColorStop(0,'rgba(255,255,255,.55)');rg.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=rg;x.fillRect(0,0,W,rimY+6*s);
+  rg=x.createRadialGradient(cx+rx*.6,rimY,0,cx+rx*.6,rimY,rx*1.2);rg.addColorStop(0,'rgba(20,0,20,.38)');rg.addColorStop(1,'rgba(20,0,20,0)');x.fillStyle=rg;x.fillRect(0,0,W,rimY+6*s);
+  // wet glints
+  for(let i=0;i<14;i++){const a=Math.PI*(.15+R()*.7),rr=.4+R()*.55,px=cx+Math.cos(a)*rx*rr*(R()<.5?-1:1),py=rimY-Math.sin(a)*domeH*rr;x.strokeStyle=`rgba(255,255,255,${.35+R()*.4})`;x.lineWidth=(.8+R())*s;x.lineCap='round';x.beginPath();x.moveTo(px,py);x.lineTo(px+(2+R()*4)*s,py-(1+R()*2)*s);x.stroke()}
+  x.restore();
+  // rim
+  x.strokeStyle='rgba(255,255,255,.7)';x.lineWidth=1.6*s;x.beginPath();x.ellipse(cx,rimY+1*s,tH,3.2*s,0,0,Math.PI);x.stroke();
+  // chamoy
+  if(O.includes('chamoy')){
+    const path=[[cx-rx*.75,rimY-domeH*.35],[cx-rx*.3,rimY-domeH*.85],[cx+rx*.05,rimY-domeH*.55],[cx+rx*.35,rimY-domeH*.9],[cx+rx*.7,rimY-domeH*.4]];
+    const drawC=(col,w,dx,dy)=>{x.strokeStyle=col;x.lineWidth=w;x.lineCap='round';x.lineJoin='round';x.beginPath();x.moveTo(path[0][0]+dx,path[0][1]+dy);for(let i=1;i<path.length;i++){const p=path[i-1],q=path[i];x.quadraticCurveTo(p[0]+dx,p[1]+dy,(p[0]+q[0])/2+dx,(p[1]+q[1])/2+dy)}x.stroke()};
+    drawC('rgba(40,0,0,.35)',6*s,1*s,2*s);drawC('#8f0f22',5.5*s,0,0);drawC('#c2182f',3*s,-.5*s,-.5*s);drawC('rgba(255,255,255,.45)',1*s,-1*s,-1.3*s);
+    [[-.6,26],[.1,40],[.55,20]].forEach(([k,len])=>{const px=cx+tH*k,py=rimY+1*s,L=len*s;x.strokeStyle='#9d1326';x.lineWidth=3.6*s;x.beginPath();x.moveTo(px,py-3*s);x.bezierCurveTo(px+1*s,py+L*.4,px-1*s,py+L*.7,px+.5*s,py+L);x.stroke();x.fillStyle='#9d1326';x.beginPath();x.arc(px+.5*s,py+L+1*s,2.6*s,0,7);x.fill();x.strokeStyle='rgba(255,255,255,.45)';x.lineWidth=.8*s;x.beginPath();x.moveTo(px-.8*s,py);x.lineTo(px-.5*s,py+L*.8);x.stroke()});
+    for(let i=0;i<260;i++){const a=Math.PI*(.12+R()*.76),rr=R()*.95,px=cx+Math.cos(a)*rx*rr,py=rimY-Math.sin(a)*domeH*(.35+rr*.62);x.fillStyle=['#8e2410','#b8421b','#6b1a0a'][i%3];x.beginPath();x.arc(px,py,(.35+R()*.6)*s,0,7);x.fill()}
+  }
+  // fruit cubes
+  if(O.includes('fruit')){for(let i=0;i<5;i++){const px=cx+(R()-.5)*rx*1.1,py=rimY-domeH*(.55+R()*.4),z=(6+R()*4)*s;x.save();x.translate(px,py);x.rotate((R()-.5)*1.2);const fg=x.createLinearGradient(-z/2,-z/2,z/2,z/2);fg.addColorStop(0,'#ffd54a');fg.addColorStop(1,'#f08a00');x.fillStyle=fg;x.beginPath();x.roundRect(-z/2,-z/2,z,z,z*.25);x.fill();x.fillStyle='rgba(255,255,255,.55)';x.beginPath();x.roundRect(-z/2+1.2*s,-z/2+1.2*s,z*.4,z*.22,z*.1);x.fill();x.fillStyle='rgba(120,40,0,.25)';x.fillRect(-z/2,z/2-z*.2,z,z*.2);x.restore()}}
+  // tarugo / straw
+  if(O.includes('straw')){x.save();x.translate(cx+rx*.35,rimY-domeH*.7);x.rotate(.28);const sw=7*s,sh=H*.42;const sg=x.createLinearGradient(-sw/2,0,sw/2,0);sg.addColorStop(0,'#5a1a0c');sg.addColorStop(.4,'#9b3a1c');sg.addColorStop(1,'#4a1208');x.fillStyle=sg;x.beginPath();x.roundRect(-sw/2,-sh,sw,sh,sw/2);x.fill();for(let i=0;i<70;i++){x.fillStyle=R()<.5?'rgba(210,90,30,.8)':'rgba(60,10,0,.6)';x.beginPath();x.arc(-sw/2+R()*sw,-sh+R()*sh,(.3+R()*.6)*s,0,7);x.fill()}x.fillStyle='rgba(255,255,255,.3)';x.fillRect(-sw/2+1.2*s,-sh+3*s,1.2*s,sh-6*s);x.restore()}
+}
+const raspaObserver=new MutationObserver(()=>document.querySelectorAll('canvas.rcup:not([data-done])').forEach(renderRaspa));
+raspaObserver.observe(document.body,{childList:true,subtree:true});
+setTimeout(()=>document.querySelectorAll('canvas.rcup:not([data-done])').forEach(renderRaspa),0);
+
+
+/* ---------- i18n (demo) ---------- */
+const T={
+ en:{nMenu:'Menu',nCatering:'Catering',nVisit:'Contact',order:'Order Now',stamp:'Raspas · Mangonadas · Snacks · Aguas Frescas',tag:'60+ flavors. Loaded Mangonadas. Good people.',lede:'Shaved ice in every color, Fruta Loca, corn in a cup, funnel cakes and aguas frescas. Order ahead for pickup, or book our crew for your next event.',viewMenu:'View the Menu',book:'Book an Event',call:'Call or text',scroll:'Scroll to explore',mEy:'Order ahead for pickup',mH:'The menu',mP:"Pick a category, build it your way, and pay online. We'll have it ready at the window."},
+ es:{nMenu:'Menú',nCatering:'Eventos',nVisit:'Contacto',order:'Ordenar',stamp:'Raspas · Mangonadas · Antojitos · Aguas Frescas',tag:'Más de 60 sabores. Mangonadas bien cargadas.',lede:'Raspas de todos colores, Fruta Loca, elote en vaso, funnel cakes y aguas frescas. Ordena para recoger o contrátanos para tu próximo evento.',viewMenu:'Ver el Menú',book:'Reservar Evento',call:'Llama o manda texto',scroll:'Desliza para ver más',mEy:'Ordena y recoge',mH:'El menú',mP:'Escoge una categoría, arma tu pedido y paga en línea. Te lo tenemos listo en la ventanita.'}
+};
+function setLang(l){document.documentElement.lang=l;document.querySelectorAll('[data-i18n]').forEach(e=>{const v=T[l][e.dataset.i18n];if(v)e.textContent=v});$('#langEn').setAttribute('aria-pressed',l==='en');$('#langEs').setAttribute('aria-pressed',l==='es')}
+$('#langEn').onclick=()=>setLang('en');$('#langEs').onclick=()=>setLang('es');
+
+/* ---------- mobile nav ---------- */
+
+
+/* ---------- menu data (from the 18th St menu board) ---------- */
+const FGROUPS=[
+ ['Blues','#1d7fe0',['Blue Cotton Candy','Blue Strawberry','Blue Bubble Gum','Blue Raspberry','Blue Hawaiian','Blue Coconut','Blue Eagle']],
+ ['Greens','#2f9e4f',['Dill Pickle','Granny Smith Apple','Margarita','Cucumber Melon','Kiwi','Lime','Green Chamoy','Lemon Lime','Honeydew Melon']],
+ ['Clears & creams','#b9b3cf',['Clear Piña Colada','Wedding Cake','Clear Lemonade','Clear Coconut','Toasted Coconut','Sal y Lemon Sweet','Sal y Lemon Sour','Clear Horchata','Vanilla']],
+ ['Reds','#d42a45',['Watermelon','Strawberry','Cherry','Jolly Rancher','Tropical Punch','Candy Apple','Hurricane','Black Cherry','Tutti Frutti','Raspberry','Apple','Leche','Red Chamoy','Tiger Blood','Strawberry Short Cake','Strawberry Cheese Cake','Strawberry Daiquiri']],
+ ['Orange & tropical','#ff8a00',['Orange','Cantaloupe','Guava','Peach','Passion Fruit','Tangerine']],
+ ['Classics','#8a4b22',['Root Beer','Tamarindo','Grape']]
+];
+const ALLFLAV=FGROUPS.flatMap(g=>g[2]);
+$('#flavorGroups').innerHTML=FGROUPS.map(([n,c,l])=>`<div class="fgroup"><h4><i style="background:${c}"></i>${n}</h4><ul>${l.map(f=>`<li>${f}</li>`).join('')}</ul></div>`).join('');
+void ['Mangonadas','Blue Cotton Candy','Fruta Loca','Tiger Blood','Corn in a Cup','Dill Pickle','Funnel Cake Delight','Red Chamoy','Tamarindo Apple','Wedding Cake','Aguas Frescas','Chili Cheese Fries'].concat(['Mangonadas','Blue Cotton Candy','Fruta Loca','Tiger Blood','Corn in a Cup','Dill Pickle','Funnel Cake Delight','Red Chamoy','Tamarindo Apple','Wedding Cake','Aguas Frescas','Chili Cheese Fries']).map(f=>`<span>${f}</span>`).join('');
+
+const RASPA_EX=[['Ice Cream',.5],['Lechera',.5],['Diced Pickle',.5],['Extra Cup',.5],['Extra Chile Powder',0],['Extra Lucas',0]];
+const CORN_EX=[['Nacho Cheese',1],['Hot Cheetos',1],['Takis',1],['Spicy Doritos',1],['Tostitos',1]];
+const AGUAS=['Watermelon','Melon','Horchata','Coco','Pineapple','Piña Colada','Cucumber Lime','Lemonade','Rusas','Micheladas'];
+const MENU=[
+ {id:'raspa',name:'Raspa',desc:'Shaved ice with your flavors. Mix up to three.',sizes:[['Small',3],['Medium',4],['Large',5],['X-Large',6]],pick:{label:'Flavors',opts:ALLFLAV,max:3,groups:FGROUPS},extras:RASPA_EX,art:['#e6334a','#1d7fe0','#ffd000']},
+ {id:'mango',g:'g2',img:'img/p_mango.webp',name:'Mangonada',desc:'Red chamoy, chile powder, tarugo and sour cherry.',sizes:[['Small',6],['Medium',7],['Large',8]],pick:{label:'Flavor',opts:['Mango','Mango Loco','Strawberry','Lime','Watermelon'],max:1},art:['#ffb000','#ff8a00','#b0182f'],o:{chamoy:true,straw:true,fruit:true}},
+ {id:'agua',g:'g3',img:'img/p_agua.webp',name:'Agua Fresca',desc:'Made fresh. Pick your flavor.',price:4,pick:{label:'Flavor',opts:AGUAS,max:1},art:['#ff5d73','#f4f1ea','#b6e35a'],o:{straw:true}},
+ {id:'fritopie',cat:'snack',name:'Frito Pie',desc:'Homemade chile, cheese',price:5},
+ {id:'nachos',cat:'snack',name:'Nachos',desc:'Cheese with jalapeño',price:4},
+ {id:'crazynachos',cat:'snack',name:'Crazy Nachos',desc:'Cheese, cream, corn, butter',price:5.5},
+ {id:'fruit',cat:'snack',name:'Fruit',desc:'Watermelon, cantaloupe, pineapple, mango, lime with chile, Lucas, chamoy',price:6},
+ {id:'frutaloca',cat:'snack',name:'Fruta Loca',desc:'Watermelon, cantaloupe, pineapple, mango, lime, red/green chamoy, Lucas, chile, sour belts, gummy worms, gummy bears',price:8},
+ {id:'caramel',cat:'snack',name:'Caramel Apple',desc:'With peanuts',price:4},
+ {id:'candy',cat:'snack',name:'Candy Apple',desc:'With chamoy, Lucas, chile',price:4},
+ {id:'tamapple',cat:'snack',name:'Tamarindo Apple',desc:'With red and green chamoy, Lucas, chile',price:5,extras:[['Fruit',1.5]]},
+ {id:'strawcream',cat:'snack',name:'Strawberries & Cream',desc:'Fresh strawberries and sweet cream',price:6},
+ {id:'spiral',cat:'snack',name:'Potato Spiral',desc:'Salt, pepper, cream, salsa Valentina, lime',price:5},
+ {id:'spiralloco',cat:'snack',name:'Potato Spiral Loco',desc:'Salt, pepper, bacon, avocado, nacho cheese, shredded cheese',price:8},
+ {id:'funnel',cat:'snack',name:'Funnel Cake',desc:'Powdered sugar',price:6},
+ {id:'funneldel',cat:'snack',name:'Funnel Cake Delight',desc:'Powdered sugar, strawberry, Cool Whip, strawberry filling, chocolate syrup',price:9,extras:[['Ice Cream',1]]},
+ {id:'oreo',cat:'snack',name:'Oreo Cookies',desc:'Powdered sugar',price:6,extras:[['Ice Cream',1]]},
+ {id:'pickle',cat:'snack',name:'Pickle / Fresh Cucumber',desc:'Red/green chamoy, chile, Lucas, lime',price:4,pick:{label:'Choose',opts:['Pickle','Fresh Cucumber'],max:1}},
+ {id:'churros',cat:'snack',name:'Churros',desc:'Cinnamon sugar',price:3},
+ {id:'fchurros',cat:'snack',name:'Filled Churros',desc:'Strawberry, caramel, pineapple or chocolate',price:4,pick:{label:'Filling',opts:['Strawberry','Caramel','Pineapple','Chocolate'],max:1},extras:[['Ice Cream',1]]},
+ {id:'cornstick',cat:'snack',name:'Corn on a Stick',desc:'Butter, cream, chile, cheese',price:4,extras:CORN_EX},
+ {id:'corncup',cat:'snack',name:'Corn in a Cup',desc:'Butter, cream, chile, cheese',sizes:[['Small',3],['Medium',4],['Large',5]],extras:CORN_EX},
+ {id:'chilifries',cat:'snack',name:'Chili Cheese Fries',desc:'Homemade chili with nacho cheese or shredded cheese',price:6,pick:{label:'Cheese',opts:['Nacho Cheese','Shredded Cheese'],max:1}},
+ {id:'fritoloco',cat:'snack',name:'Frito Loco',desc:'Nacho cheese, Mexican cheese, corn',price:6}
+];
+const fromPrice=m=>m.sizes?m.sizes[0][1]:m.price;
+$('#raspaArt').innerHTML='<img src="img/p_raspa.webp" alt="Rainbow raspa in front of the syrup wall" loading="lazy">';
+$('#mangoArt').innerHTML='<img src="img/p_mango.webp" alt="Mangonada with chamoy, chile and a tarugo" loading="lazy">';
+$('#aguaArt').innerHTML='<img src="img/p_agua.webp" alt="Horchata, watermelon and cucumber-lime aguas frescas" loading="lazy">';
+const sizeTiles=m=>m.sizes.map(s=>`<div><b>${money(s[1])}</b>${s[0]}</div>`).join('');
+$('#raspaSizes').innerHTML=sizeTiles(MENU[0]);$('#mangoSizes').innerHTML=sizeTiles(MENU[1]);
+const ACOL=['#ff5d73','#ffd98a','#f4ead8','#f4f1ea','#ffd84d','#fff0b3','#a6d96a','#fff27a','#d42a45','#e0521b'];
+$('#aguaList').innerHTML=AGUAS.map((a,i)=>`<span class="flav"><i style="background:${ACOL[i]}"></i>${a}</span>`).join('');
+$('#snackList').innerHTML=MENU.filter(m=>m.cat==='snack').map(m=>`<div class="snack"><h4>${m.name}</h4><p>${m.desc}</p>${m.extras?`<span class="ex">Extra: ${m.extras.map(e=>e[0]).join(', ')}</span>`:''}
+ <div class="act"><span class="price">${m.sizes?'from ':''}${money(fromPrice(m))}</span><button class="btn btn-ink btn-sm" data-add="${m.id}">Add</button></div></div>`).join('');
+
+/* tabs (generic) */
+function selTab(t){const list=[...t.parentElement.querySelectorAll('.tab')];list.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;$('#'+x.getAttribute('aria-controls')).hidden=!on})}
+document.querySelectorAll('[data-tabs]').forEach(bar=>{const list=[...bar.querySelectorAll('.tab')];list.forEach((t,i)=>{t.onclick=()=>selTab(t);t.onkeydown=e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=list[(i+(e.key==='ArrowRight'?1:-1)+list.length)%list.length];selTab(n);n.focus()}}});selTab(list[0])});
+
+
+/* ---------- modal helpers ---------- */
+const root=$('#modalRoot');let lastFocus=null;
+function openModal(html,onMount){lastFocus=document.activeElement;root.innerHTML=`<div class="scrim" id="scrim"><div class="modal" role="dialog" aria-modal="true">${html}</div></div>`;
+ const s=$('#scrim');s.addEventListener('click',e=>{if(e.target===s||e.target.closest('[data-close]'))closeModal()});
+ onMount&&onMount(s);const f=s.querySelector('input,select,button:not(.x)');f&&f.focus()}
+function closeModal(){root.innerHTML='';lastFocus&&lastFocus.focus&&lastFocus.focus()}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(root.innerHTML)closeModal();else if(drawer)closeCart()}});
+function toast(msg){const t=document.createElement('div');t.className='toast';t.setAttribute('role','status');t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2200)}
+
+/* ---------- item builder ---------- */
+const cart=[];
+document.addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(b)builder(MENU.find(m=>m.id===b.dataset.add))});
+function builder(m){
+ const st={size:m.sizes?Math.min(1,m.sizes.length-1):null,pick:m.pick&&m.pick.max===1?[m.pick.opts[0]]:[],ex:[]};
+ const optBtns=(list)=>list.map(o=>`<button class="opt" data-f="${o}" aria-pressed="${st.pick.includes(o)}">${o}</button>`).join('');
+ const pickHtml=!m.pick?'':`<div><span class="flabel">${m.pick.label}${m.pick.max>1?` <span style="font-weight:400;color:var(--ink-2)">(pick up to ${m.pick.max})</span>`:''}</span>
+   <div id="bPick" style="margin-top:8px;display:grid;gap:8px">${m.pick.groups?m.pick.groups.map(g=>`<div class="opt-group"><small>${g[0]}</small><div class="opts">${optBtns(g[2])}</div></div>`).join(''):`<div class="opts">${optBtns(m.pick.opts)}</div>`}</div></div>`;
+ const html=`<div class="mh"><h3>${m.name}</h3><button class="x" data-close aria-label="Close">✕</button></div><div class="mb">
+ <p style="color:var(--ink-2)">${m.desc}</p>
+ ${m.sizes?`<div><span class="flabel">Size</span><div class="opts" id="bSize" style="margin-top:8px">${m.sizes.map((s,i)=>`<button class="opt" data-i="${i}" aria-pressed="${i===st.size}">${s[0]} · ${money(s[1])}</button>`).join('')}</div></div>`:''}
+ ${pickHtml}
+ ${m.extras?`<div><span class="flabel">Extras</span><div class="opts" id="bEx" style="margin-top:8px">${m.extras.map(t=>`<button class="opt" data-t="${t[0]}" aria-pressed="false">${t[0]}${t[1]?' +'+money(t[1]):''}</button>`).join('')}</div></div>`:''}
+ <div class="field"><label for="bNote">Special requests</label><input id="bNote" placeholder="Extra chamoy, no chile…"></div>
+ <button class="btn btn-red" id="bAdd">Add to order · <span id="bPrice"></span></button></div>`;
+ openModal(html,s=>{
+  const price=()=>(m.sizes?m.sizes[st.size][1]:m.price)+st.ex.reduce((a,t)=>a+m.extras.find(x=>x[0]===t)[1],0);
+  const upd=()=>{s.querySelector('#bPrice').textContent=money(price())};upd();
+  s.querySelector('#bSize')?.addEventListener('click',e=>{const b=e.target.closest('[data-i]');if(!b)return;st.size=+b.dataset.i;s.querySelectorAll('#bSize .opt').forEach(o=>o.setAttribute('aria-pressed',o===b));upd()});
+  s.querySelector('#bPick')?.addEventListener('click',e=>{const b=e.target.closest('[data-f]');if(!b)return;const f=b.dataset.f,i=st.pick.indexOf(f);
+   if(m.pick.max===1){st.pick=[f];s.querySelectorAll('#bPick .opt').forEach(o=>o.setAttribute('aria-pressed',o===b));return}
+   if(i>-1){st.pick.splice(i,1);b.setAttribute('aria-pressed','false')}else if(st.pick.length<m.pick.max){st.pick.push(f);b.setAttribute('aria-pressed','true')}else toast(`Up to ${m.pick.max} flavors per cup`)});
+  s.querySelector('#bEx')?.addEventListener('click',e=>{const b=e.target.closest('[data-t]');if(!b)return;const t=b.dataset.t,i=st.ex.indexOf(t);
+   if(i>-1){st.ex.splice(i,1);b.setAttribute('aria-pressed','false')}else{st.ex.push(t);b.setAttribute('aria-pressed','true')}upd()});
+  s.querySelector('#bAdd').onclick=()=>{
+   if(m.pick&&!st.pick.length){toast('Pick at least one flavor');return}
+   const opts=[m.sizes?m.sizes[st.size][0]:null,st.pick.join(' + ')||null,st.ex.length?'+ '+st.ex.join(', '):null,s.querySelector('#bNote').value.trim()||null].filter(Boolean).join(' · ');
+   cart.push({name:m.name,opts,price:price(),qty:1});renderCart();closeModal();toast(`${m.name} added to your order`)};
+ });
+}
+
+/* ---------- cart drawer ---------- */
+let drawer=null;
+function totals(){const sub=cart.reduce((a,l)=>a+l.price*l.qty,0);const tax=sub*.0825;return{sub,tax,total:sub+tax}}
+function renderCart(){
+ const n=cart.reduce((a,l)=>a+l.qty,0);const c=$('#cartCount');c.hidden=!n;c.textContent=n;
+ if(!drawer)return;
+ const{sub,tax,total}=totals();
+ drawer.querySelector('.dl').innerHTML=cart.length?cart.map((l,i)=>`<div class="line"><span class="n">${l.name}</span><span class="p">${money(l.price*l.qty)}</span><span class="o">${l.opts||''}</span>
+  <div class="qty"><button data-q="${i}" data-d="-1" aria-label="Remove one">−</button><span>${l.qty}</span><button data-q="${i}" data-d="1" aria-label="Add one">+</button></div></div>`).join(''):`<div class="empty">Your order is empty.<br><a href="#menu" data-closecart>Browse the menu</a></div>`;
+ drawer.querySelector('.sum').innerHTML=`<div><span>Subtotal</span><span>${money(sub)}</span></div><div><span>Est. tax (8.25%)</span><span>${money(tax)}</span></div><div class="t"><span>Total</span><span>${money(total)}</span></div>`;
+ drawer.querySelector('#checkout').disabled=!cart.length;
+}
+function openCart(){if(drawer)return;const sc=document.createElement('div');sc.className='scrim';sc.style.zIndex=60;sc.id='cartScrim';
+ drawer=document.createElement('aside');drawer.className='drawer';drawer.setAttribute('role','dialog');drawer.setAttribute('aria-label','Your order');
+ drawer.innerHTML=`<div class="dh"><h3>Your order</h3><button class="x" id="closeCart" aria-label="Close">✕</button></div><div class="dl"></div><div class="df"><div class="sum"></div><button class="btn btn-red" id="checkout">Checkout for pickup</button></div>`;
+ document.body.append(sc,drawer);sc.onclick=closeCart;drawer.querySelector('#closeCart').onclick=closeCart;
+ drawer.addEventListener('click',e=>{const q=e.target.closest('[data-q]');if(q){const l=cart[+q.dataset.q];l.qty+=+q.dataset.d;if(l.qty<1)cart.splice(+q.dataset.q,1);renderCart()}if(e.target.closest('[data-closecart]'))closeCart()});
+ drawer.querySelector('#checkout').onclick=()=>{closeCart();checkout()};
+ renderCart();drawer.querySelector('#closeCart').focus()}
+function closeCart(){if(!drawer)return;drawer.remove();$('#cartScrim')?.remove();drawer=null}
+$('#openCart').onclick=openCart;
+
+/* ---------- checkout (demo payment) ---------- */
+function pickupTimes(){const out=['ASAP (about 10 min)'];const d=new Date();d.setMinutes(Math.ceil(d.getMinutes()/15)*15+30,0,0);for(let i=0;i<6;i++){out.push(d.toLocaleTimeString([], {hour:'numeric',minute:'2-digit'}));d.setMinutes(d.getMinutes()+15)}return out}
+function checkout(prefill){
+ const{total}=totals();
+ openModal(`<div class="mh"><h3>Checkout</h3><button class="x" data-close aria-label="Close">✕</button></div><form class="mb" id="payForm" novalidate>
+  <div class="row2"><div class="field"><label for="cName">Name for pickup</label><input id="cName" autocomplete="name" value="Bruce W." required></div>
+  <div class="field"><label for="cPhone">Phone (for “ready” text)</label><input id="cPhone" type="tel" autocomplete="tel" placeholder="(830) 555-0123" value="" required></div></div>
+  <div class="field"><label for="cTime">Pickup time</label><select id="cTime">${pickupTimes().map(t=>`<option>${t}</option>`).join('')}</select></div>
+  <div><span class="flabel">Tip</span><div class="opts" id="tips" style="margin-top:8px">${[0,10,15,20].map((p,i)=>`<button type="button" class="opt" data-tip="${p}" aria-pressed="${p===15}">${p?p+'%':'No tip'}</button>`).join('')}</div></div>
+  <div><span class="flabel">Card</span><div class="cardbox" style="margin-top:8px">
+   <div class="field"><label for="cNum" class="sr" style="font-weight:500;font-size:12px">Card number</label><input id="cNum" inputmode="numeric" value="4242 4242 4242 4242"></div>
+   <div class="row2"><div class="field"><label for="cExp" style="font-weight:500;font-size:12px">Expiry</label><input id="cExp" value="12 / 28"></div><div class="field"><label for="cCvc" style="font-weight:500;font-size:12px">CVC</label><input id="cCvc" value="123"></div></div>
+  </div></div>
+  <div class="notice">Preview: payments here are simulated. The live site will use Square's secure checkout.</div>
+  <button class="btn btn-red" id="payBtn" type="submit">Pay <span id="payAmt">${money(total)}</span></button></form>`,s=>{
+  let tip=15;const amt=()=>total+totals().sub*tip/100;const u=()=>s.querySelector('#payAmt').textContent=money(amt());u();
+  s.querySelector('#tips').addEventListener('click',e=>{const b=e.target.closest('[data-tip]');if(!b)return;tip=+b.dataset.tip;s.querySelectorAll('#tips .opt').forEach(o=>o.setAttribute('aria-pressed',o===b));u()});
+  s.querySelector('#payForm').onsubmit=e=>{e.preventDefault();const name=s.querySelector('#cName').value.trim();if(!name){toast('Add a name for pickup');return}
+   const btn=s.querySelector('#payBtn');btn.disabled=true;btn.textContent='Processing…';const paid=amt(),time=s.querySelector('#cTime').value;
+   setTimeout(()=>{const no='18-'+Math.floor(1000+Math.random()*9000);cart.length=0;renderCart();
+    s.querySelector('.modal').innerHTML=`<div class="mh"><span></span><button class="x" data-close aria-label="Close">✕</button></div><div class="mb success"><div class="big">¡Gracias, ${name.split(' ')[0]}!</div><p>Order <strong style="font-family:var(--mono)">#${no}</strong> is in. ${money(paid)} paid.</p><p style="color:var(--ink-2)">Pickup: ${time}. We'll text you when it's at the window.</p><button class="btn btn-ink" data-close>Done</button></div>`},1300)};
+ });
+}
+
+/* ---------- catering cards (Bahama Buck's layout) ---------- */
+const PACKS=[
+ {id:'party',g:'g1',img:'img/p_pack.webp',name:'Raspa Party Packs',badge:'From $3 / guest',desc:'Cups, coolers of fresh-shaved ice and your pick of four flavors from our 60+. Drop-off only, set up in minutes.',inc:['Ice shaved fresh before drop-off','4 syrup flavors of your choice','Cups, spoons, straws, napkins','Insulated coolers (returned next day)'],art:['#e6334a','#1d7fe0','#ffb000'],bg:'#ffe3e8',cta:'Order Now'},
+ {id:'mango',g:'g2',img:'img/p_bar.webp',name:'Mangonada Bar',badge:'From $5.50 / guest',desc:'A Mangonada station loaded with red chamoy, chile powder, tarugos and sour cherries. A hit at quinces and weddings.',inc:['Mango, Mango Loco, Strawberry, Lime, Watermelon','Red chamoy, chile powder, tarugo, sour cherry','Fresh mango','Decorated table sign'],art:['#ffb000','#ff8a00','#b0182f'],bg:'#fff1cc',cta:'Order Now',o:{chamoy:true,straw:true,fruit:true}},
+ {id:'cart',g:'g4',img:'img/p_booth.webp',name:'18th St Event Booth',badge:'2-hour minimum',desc:'You bring the people, we bring the tent. Our crew serves raspas, Mangonadas and snacks to order right at your event.',inc:['Tent, banner and 2–4 crew members','Raspas in 60+ flavors','Mangonadas, corn in a cup and more','Setup and cleanup included'],art:['#1d7fe0','#2f9e4f','#e6334a'],bg:'#dbeaff',cta:'Request a Quote'},
+ {id:'fruit',g:'g5',img:'img/p_tray.webp',name:'Fruta Loca Trays',badge:'Serves 20+',desc:'Cups of fresh-cut fruit loaded with chamoy, Lucas, chile and gummies. Great for offices and team events.',inc:['Watermelon, cantaloupe, pineapple, mango','Lime, Tajín and chamoy on the side','Individual lidded cups','Delivered chilled'],art:['#ff5d73','#ffd84d','#6fbf4a'],bg:'#ffe6ea',cta:'Order Now',o:{fruit:true}},
+ {id:'agua',g:'g3',img:'img/p_aguabar.webp',name:'Agua Fresca Bar',badge:'3 or 5 gallon',desc:'Big dispensers of horchata, watermelon, piña colada or any agua on our menu. Pairs perfectly with any raspa package.',inc:['Choice of 2–3 agua flavors','Beverage dispensers and ice','Cups and straws','Garnish of fresh fruit'],art:['#9c1f5b','#f4f1ea','#ff5d73'],bg:'#f6e1ec',cta:'Order Now',o:{straw:true}},
+ {id:'fund',g:'g6',img:'img/p_fund.webp',name:'School Fundraisers',badge:'Earn back 20%',desc:'Pre-sale raspa tickets or a raspa day at your school. Your group keeps a share of every cup sold.',inc:['Printable pre-sale ticket sheets','Raspa day with our cart on campus','20% of sales back to your group','Flyer for your group to share'],art:['#2f9e4f','#b6e35a','#1d7fe0'],bg:'#e0f3e3',cta:'Request a Quote'}
+];
+$('#cat-packs').innerHTML=PACKS.map(p=>`<article class="cat-card"><div class="art"><span class="badge">${p.badge}</span>${p.img?`<img src="${p.img}" alt="${p.name}" loading="lazy">`:`<div class="ph ${p.g}" data-l="${p.name}" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 10h12l-1.6 11H7.6z" fill="#ffffff" opacity=".92"/><path d="M4.6 10a7.4 7.4 0 0 1 14.8 0z" fill="#ffe9b0"/></svg></div>`}</div>
+ <div class="body"><h3>${p.name}</h3><p>${p.desc}</p></div>
+ <div class="foot"><button class="btn btn-line btn-sm" data-more="${p.id}">Learn More</button><button class="btn btn-red btn-sm" data-quote="${p.id}">${p.cta}</button></div></article>`).join('');
+document.addEventListener('click',e=>{
+ const m=e.target.closest('[data-more]');if(m){const p=PACKS.find(x=>x.id===m.dataset.more);
+  openModal(`<div class="mh"><h3>${p.name}</h3><button class="x" data-close aria-label="Close">✕</button></div><div class="mb"><div style="background:${p.bg};border-radius:14px;display:grid;place-items:center;padding:16px">${cup(p.art,1.3,p.o||{})}</div><p>${p.desc}</p><div><span class="flabel">What's included</span><ul class="detail-list" style="margin-top:8px">${p.inc.map(i=>`<li>${i}</li>`).join('')}</ul></div><span class="eyebrow">${p.badge}</span><button class="btn btn-red" data-quote="${p.id}">${p.cta}</button></div>`)}
+ const q=e.target.closest('[data-quote]');if(q){e.preventDefault();quote({pkg:q.dataset.quote})}
+});
+
+/* ---------- quote form ---------- */
+function quote(pre={}){
+ const d=new Date();d.setDate(d.getDate()+14);const iso=d.toISOString().slice(0,10);
+ openModal(`<div class="mh"><h3>Request a catering quote</h3><button class="x" data-close aria-label="Close">✕</button></div><form class="mb" id="qForm" novalidate>
+  <div class="row2"><div class="field"><label for="qName">Your name</label><input id="qName" autocomplete="name" required></div><div class="field"><label for="qPhone">Phone</label><input id="qPhone" type="tel" autocomplete="tel"></div></div>
+  <div class="field"><label for="qEmail">Email</label><input id="qEmail" type="email" autocomplete="email" required></div>
+  <div class="row2"><div class="field"><label for="qDate">Event date</label><input id="qDate" type="date" value="${iso}"></div><div class="field"><label for="qGuests">Guests</label><input id="qGuests" type="number" min="10" value="${pre.guests||60}"></div></div>
+  <div class="field"><label for="qPkg">Package</label><select id="qPkg">${PACKS.map(p=>`<option value="${p.id}" ${p.id===pre.pkg?'selected':''}>${p.name}</option>`).join('')}<option value="" ${!pre.pkg?'selected':''}>Not sure yet</option></select></div>
+  <div class="field"><label for="qType">Event type</label><select id="qType"><option>Birthday</option><option>Quinceañera</option><option>Wedding</option><option>School / Fundraiser</option><option>Office / Corporate</option><option>Other</option></select></div>
+  <div class="field"><label for="qNotes">Anything else?</label><textarea id="qNotes" rows="3">${pre.notes||''}</textarea></div>
+  <button class="btn btn-red" type="submit">Send request</button></form>`,s=>{
+  s.querySelector('#qForm').onsubmit=e=>{e.preventDefault();const n=s.querySelector('#qName').value.trim(),em=s.querySelector('#qEmail').value.trim();
+   if(!n||!/.+@.+\..+/.test(em)){toast('Add your name and a valid email');return}
+   s.querySelector('.modal').innerHTML=`<div class="mh"><span></span><button class="x" data-close aria-label="Close">✕</button></div><div class="mb success"><div class="big">Request sent!</div><p>Thanks, ${n.split(' ')[0]}. We'll reply to <strong>${em}</strong> within one business day with pricing and availability.</p><button class="btn btn-ink" data-close>Done</button></div>`};
+ });
+}
+
+/* ---------- estimator ---------- */
+const CALC=[['party','Party Pack',3],['mango','Mangonada Bar',5.5],['cart','Raspa Cart',4.5]];let pkg='party';
+$('#pkgSeg').innerHTML=CALC.map(c=>`<button data-p="${c[0]}" aria-pressed="${c[0]===pkg}">${c[1]} · $${c[2].toFixed(2)}</button>`).join('');
+$('#pkgSeg').onclick=e=>{const b=e.target.closest('[data-p]');if(!b)return;pkg=b.dataset.p;$('#pkgSeg').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));calc()};
+function calc(){const g=+$('#guests').value;$('#guestsOut').textContent=g;const c=CALC.find(x=>x[0]===pkg);
+ const base=g*c[2],top=$('#addTop').checked?g*.75:0,staff=$('#addStaff').checked||pkg==='cart'?150:0;const t=base+top+staff;
+ $('#addStaff').disabled=pkg==='cart';if(pkg==='cart')$('#addStaff').checked=true;
+ $('#calcTotal').textContent='$'+Math.round(t).toLocaleString();
+ $('#calcLines').innerHTML=`<div><span>${c[1]} × ${g}</span><span>$${base.toFixed(0)}</span></div>${top?`<div><span>Topping bar</span><span>$${top.toFixed(0)}</span></div>`:''}${staff?`<div><span>Attendant</span><span>$150</span></div>`:''}<div><span>Per guest</span><span>$${(t/g).toFixed(2)}</span></div>`;
+ return{g,c,t}}
+['guests','addTop','addStaff'].forEach(id=>$('#'+id).addEventListener('input',calc));calc();
+$('#calcQuote').onclick=()=>{const{g,c,t}=calc();quote({pkg,guests:g,notes:`Estimator: ${c[1]} for ${g} guests, about $${Math.round(t)}.`})};
+
+/* ---------- carousel ---------- */
+const slides=[...document.querySelectorAll('.slide')];let cur=0,timer;
+$('#dots').innerHTML=slides.map((_,i)=>`<button aria-label="Slide ${i+1}" aria-current="${i===0}"></button>`).join('');
+const dots=[...document.querySelectorAll('#dots button')];
+function go(i){cur=(i+slides.length)%slides.length;slides.forEach((s,k)=>{s.classList.toggle('on',k===cur);s.setAttribute('aria-hidden',k!==cur)});dots.forEach((d,k)=>d.setAttribute('aria-current',k===cur))}
+dots.forEach((d,i)=>d.onclick=()=>{go(i);restart()});
+$('#prev').onclick=()=>{go(cur-1);restart()};$('#next').onclick=()=>{go(cur+1);restart()};
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function restart(){clearInterval(timer);if(!reduce)timer=setInterval(()=>go(cur+1),5500)}
+const car=$('#carousel');car.onmouseenter=()=>clearInterval(timer);car.onmouseleave=restart;restart();go(0);
+/* ---------- THE POUR: sprite-sheet scrub engine (desktop 16:9 + phone square film) ---------- */
+(function(){
+ const sec=document.getElementById('film');if(!sec)return;
+ const cv=document.getElementById('fc'),x=cv.getContext('2d',{alpha:false});
+ const CFG=window.FILM,N=CFG.frames;
+ const mq=matchMedia('(max-width:760px)');
+ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const JUMP=new URLSearchParams(location.search).get('jump');
+ if(JUMP!==null){history.scrollRestoration='manual';document.documentElement.style.scrollBehavior='auto'}
+ const head=document.querySelector('header.nav');
+ const beats=[...sec.querySelectorAll('.beat')].map(b=>({el:b,in:+b.dataset.in,peak:+b.dataset.peak,out:+b.dataset.out,a:-1}));
+ const chLabel=document.getElementById('chLabel'),chBar=document.getElementById('chBar'),chapter=document.getElementById('chapter');
+ const bar=document.getElementById('fbar'),pct=document.getElementById('fpct'),loader=document.getElementById('floader'),fade=document.getElementById('ffade');
+ const CH=[[0,'The wall'],[.2,'The pour'],[.4,'The ice'],[.6,'The cup'],[.8,'The window']];
+ let S,PER,imgs,loaded,bitmaps,decoding,ready,queue,active;
+ let cur=0,target=0,displayed=-1,lastSheet=-1,dir=1,lastP=0,mobile=mq.matches;
+ function setup(){
+  S=mobile?CFG.m:CFG.d;PER=S.cols*S.rows;
+  if(bitmaps)bitmaps.forEach(b=>b.close&&b.close());
+  imgs=new Array(S.sheets);loaded=new Array(S.sheets).fill(false);bitmaps=new Map();decoding=new Set();ready=0;queue=[];active=0;displayed=-1;lastSheet=-1;
+ }
+ const sheetOf=i=>Math.floor(i/PER);
+ const src=i=>S.dir+'s_'+String(i).padStart(3,'0')+'.jpg';
+ /* network: priority queue around the playhead, 6 in flight */
+ function want(i){if(i<0||i>=S.sheets||loaded[i]||imgs[i]||queue.includes(i))return;queue.push(i)}
+ function pump(){const set=S;while(active<6&&queue.length){const i=queue.shift();if(imgs[i])continue;active++;const im=new Image();im.decoding='async';imgs[i]=im;
+   im.onload=()=>{if(set!==S)return;active--;loaded[i]=true;ready++;const p=Math.round(ready/S.sheets*100);bar&&(bar.style.width=p+'%');pct&&(pct.textContent=p+'%');ensure(true);pump()};
+   im.onerror=()=>{if(set!==S)return;active--;imgs[i]=null;pump()};im.src=src(i)}}
+ function prioritize(c){const order=[];for(let k=0;k<=8;k++){order.push(c+dir*k);if(k<3)order.push(c-dir*k)}
+  queue=queue.filter(i=>!order.includes(i));order.reverse().forEach(i=>{if(i>=0&&i<S.sheets&&!loaded[i]&&!imgs[i])queue.unshift(i)});pump()}
+ /* decode: off-thread ImageBitmaps in a small window, direction-aware */
+ function ensure(force){const c=sheetOf(Math.round(cur));if(c===lastSheet&&!force)return;lastSheet=c;
+  const ahead=5,behind=2,lo=Math.max(0,dir>0?c-behind:c-ahead),hi=Math.min(S.sheets-1,dir>0?c+ahead:c+behind);
+  for(let i=lo;i<=hi;i++){if(!loaded[i]||bitmaps.has(i)||decoding.has(i))continue;decoding.add(i);const set=S;
+   createImageBitmap(imgs[i]).then(b=>{decoding.delete(i);if(set!==S){b.close();return}const cc=sheetOf(Math.round(cur));if(i<cc-ahead-1||i>cc+ahead+1){b.close();return}bitmaps.set(i,b);if(sheetOf(displayed)===i||displayed<0)draw(Math.round(cur),true)}).catch(()=>decoding.delete(i))}
+  for(const k of Array.from(bitmaps.keys()))if(k<c-ahead-1||k>c+ahead+1){bitmaps.get(k).close();bitmaps.delete(k)}
+  prioritize(c)}
+ /* never draw an undecoded <img> mid-scroll (that sync decode is the stutter) — use nearest decoded frame */
+ function pick(i){if(bitmaps.has(sheetOf(i)))return i;for(let k=1;k<N;k++){const a=i+k*dir,b=i-k*dir;if(b>=0&&b<N&&bitmaps.has(sheetOf(b)))return b;if(a>=0&&a<N&&bitmaps.has(sheetOf(a)))return a}return -1}
+ function fit(){const r=cv.getBoundingClientRect(),d=Math.min(mobile?1.5:1,devicePixelRatio||1);cv.width=Math.max(1,Math.round(r.width*d));cv.height=Math.max(1,Math.round(r.height*d));displayed=-1;draw(Math.round(cur),true)}
+ function draw(i,force){let j=pick(i);let srcImg;
+  if(j<0){const s=sheetOf(i);if(!loaded[s])return;j=i;srcImg=imgs[s]}else srcImg=bitmaps.get(sheetOf(j));
+  if(j===displayed&&!force)return;
+  const k=j%PER,sx=(k%S.cols)*S.fw,sy=Math.floor(k/S.cols)*S.fh,cw=cv.width,ch=cv.height;
+  const s=Math.max(cw/S.fw,ch/S.fh),w=S.fw*s,h=S.fh*s;
+  x.drawImage(srcImg,sx,sy,S.fw,S.fh,(cw-w)/2,(ch-h)/2,w,h);displayed=j}
+ function progress(){const r=sec.getBoundingClientRect(),span=r.height-innerHeight;return span<=0?0:Math.max(0,Math.min(1,-r.top/span))}
+ function beatAlpha(b,p){if(p<b.in||p>b.out)return 0;if(p<b.peak)return(p-b.in)/Math.max(1e-4,b.peak-b.in);if(b.out>1.5)return 1;return 1-(p-b.peak)/Math.max(1e-4,b.out-b.peak)}
+ let ci=-1,overOn=null;
+ function paint(){
+  const p=progress();if(p!==lastP){dir=p>lastP?1:-1;lastP=p}
+  target=p*(N-1);cur+=(target-cur)*0.18;if(Math.abs(target-cur)<.05)cur=target;
+  ensure(false);draw(Math.round(cur));
+  for(const b of beats){const a=Math.round(beatAlpha(b,p)*100)/100;if(a===b.a)continue;b.a=a;b.el.style.opacity=a;b.el.style.setProperty('--dy',((1-a)*14*(p<b.peak?1:-1)).toFixed(1)+'px');b.el.classList.toggle('on',a>.5)}
+  let c=0;CH.forEach((q,i)=>{if(p>=q[0])c=i});if(c!==ci){ci=c;chLabel.textContent=CH[c][1]}
+  chBar.style.transform='scaleX('+p.toFixed(3)+')';chapter.style.opacity=p>.985?0:1;
+  fade.style.opacity=Math.max(0,Math.min(1,(p-.9)/.1)).toFixed(3);
+  const r=sec.getBoundingClientRect(),over=r.top<=0&&r.bottom>innerHeight*.5&&p<.96;if(over!==overOn){overOn=over;head.classList.toggle('over',over)}
+  requestAnimationFrame(paint)}
+ function navh(){document.documentElement.style.setProperty('--navh',head.getBoundingClientRect().height+'px')}
+ addEventListener('resize',()=>{navh();fit()});addEventListener('load',()=>{navh();fit()});if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{navh();fit()});
+ mq.addEventListener('change',()=>{mobile=mq.matches;setup();navh();fit();ensure(true)});
+ (async()=>{
+  setup();navh();fit();
+  // first screen: load the opening sheets before revealing
+  [0,1,2,3].forEach(want);pump();
+  await new Promise(res=>{const t=setInterval(()=>{if(loaded[0]&&loaded[1]){clearInterval(t);res()}},40);setTimeout(()=>{clearInterval(t);res()},6000)});
+  ensure(true);await new Promise(r=>setTimeout(r,60));fit();
+  loader&&loader.classList.add('gone');
+  // background: everything else, in order, after the opening
+  for(let i=4;i<S.sheets;i++)want(i);pump();
+  if(reduce){cur=target=N-1;draw(N-1,true);beats.forEach(b=>b.el.style.opacity=1)}else requestAnimationFrame(paint);
+  if(JUMP!==null){scrollTo(0,+JUMP||0);lastP=progress();cur=target=lastP*(N-1);ensure(true);
+   await new Promise(res=>{const t=setInterval(()=>{if(bitmaps.has(sheetOf(Math.round(cur)))){clearInterval(t);res()}},40);setTimeout(()=>{clearInterval(t);res()},8000)});draw(Math.round(cur),true)}
+  window.__ready=true;
+ })();
+})();
+
+/* ---------- live google map (shown only if the embed loads) ---------- */
+
+
+/* ---------- reviews carousel ---------- */
+(function(){const t=document.getElementById('rvtrack');if(!t)return;const step=()=>t.querySelector('.rv').getBoundingClientRect().width+20;
+ document.querySelector('.rvbtn.prev').onclick=()=>t.scrollBy({left:-step(),behavior:'smooth'});
+ document.querySelector('.rvbtn.next').onclick=()=>t.scrollBy({left:step(),behavior:'smooth'});})();
+
+/* ---------- page router: one section at a time ---------- */
+const views=[...document.querySelectorAll('.view')];
+function route(){
+  let id=decodeURIComponent(location.hash.slice(1))||'home';let el=document.getElementById(id);
+  if(!el||!el.closest('.view')){el=document.getElementById('home');id='home'}
+  const view=el.closest('.view');
+  views.forEach(v=>v.hidden=v!==view);
+  document.querySelectorAll('#navLinks a').forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+view.id?'page':'false'));
+  const panel=el.closest('[role=tabpanel]')||(el.getAttribute('role')==='tabpanel'?el:null);
+  if(panel){const t=document.querySelector(`[aria-controls="${panel.id}"]`);t&&selTab(t)}
+  requestAnimationFrame(()=>{if(el===view)window.scrollTo(0,0);else el.scrollIntoView({block:'start'})});
+  view.classList.remove('enter');void view.offsetWidth;view.classList.add('enter');
+}
+window.addEventListener('hashchange',route);route();
+})();
+</script>
